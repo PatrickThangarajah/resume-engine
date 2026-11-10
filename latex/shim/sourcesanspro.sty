@@ -1,0 +1,8 @@
+% Local stand-in for the CTAN sourcesanspro package (Overleaf has the real one).
+\ProvidesPackage{sourcesanspro}[local shim]
+\DeclareOption*{}\ProcessOptions\relax
+\RequirePackage{fontspec}
+\setmainfont[Path=fonts/,UprightFont=*-Regular,ItalicFont=*-It,BoldFont=*-Bold,BoldItalicFont=*-BoldIt,Extension=.otf]{SourceSansPro}
+\newfontfamily\sourcesanspro[Path=fonts/,UprightFont=*-Regular,ItalicFont=*-It,BoldFont=*-Bold,BoldItalicFont=*-BoldIt,Extension=.otf]{SourceSansPro}
+\newfontfamily\sourcesansprolight[Path=fonts/,UprightFont=*-Light,ItalicFont=*-LightIt,BoldFont=*-Semibold,BoldItalicFont=*-SemiboldIt,Extension=.otf]{SourceSansPro}
+\endinput

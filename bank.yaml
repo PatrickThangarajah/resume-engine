@@ -1,0 +1,479 @@
+# =============================================================================
+#  RESUME BANK: the only place your wording lives.
+#
+#  Rules:
+#   * Only you edit this file. The AI never writes text, it only picks IDs.
+#   * Text is LaTeX-ready: escape  &  %  #  $  _  as  \&  \%  \#  \$  \_
+#   * Number ranges use --  (e.g. 3.4--7.0). Never put \newline or \vspace here;
+#     all spacing lives in latex/layout.tex.
+#   * "group" marks bullets that say the same thing in different words.
+#     The builder refuses to put two bullets from the same group on one resume.
+#   * Run  python build.py check  after editing to lint the bank.
+# =============================================================================
+
+contact:                      # pick any of these, in order, in a recipe
+  location: Calgary, AB
+  phone: 403-585-1903
+  email_gmail: ptemmanual@gmail.com
+  email_uw: petthang@uwaterloo.ca
+  linkedin: www.linkedin.com/in/patrickthangarajah/
+  tn: Eligible to work in the U.S. under TN status
+  tn_short: TN eligible
+  citizen: Canadian Citizen
+  relocate: Open to Relocation
+
+headlines:                    # line under your name
+  design_proto: Product Design | Prototyping | Testing \& Validation | Simulation
+  sim_design: Simulation \& FEA | Testing \& Validation | Mechanical Design | Prototyping
+  meddevice: MECHANICAL DESIGN | TESTING \& VALIDATION | PROTOTYPING | SIMULATION
+  fea_biomech: FINITE ELEMENT ANALYSIS | COMPUTATIONAL BIOMECHANICS | LS-DYNA | MODEL VALIDATION
+  fea_mechanics: FINITE ELEMENT ANALYSIS | ENGINEERING MECHANICS | LS-DYNA | MODEL VALIDATION
+  injury_biomech: INJURY BIOMECHANICS | OCCUPANT SAFETY | CRASH \& IMPACT SIMULATION
+
+summaries:
+  hardware: >-
+    Recent MASc graduate in mechanical engineering with practical experience designing,
+    building, and testing hardware systems, including sensor-integrated test setups and
+    control circuitry. Brings simulation, DOE, and data analysis skills to support designs
+    from concept through validation.
+  meddevice: >-
+    Recent MASc graduate in mechanical engineering with hands-on experience designing,
+    building, and verifying hardware against requirements from concept through validation.
+    Research background in occupant restraint crashworthiness, physical test correlation,
+    DOE, and technical reporting.
+  fea_occupant: >-
+    Mechanical Engineering MASc graduate with experience in finite element (FE) modelling,
+    FE model validation, and simulation-based design, applied to occupant safety and impact
+    biomechanics.
+  injury_biomech: >-
+    Mechanical Engineering MASc graduate specializing in injury biomechanics, with experience
+    evaluating injury mechanisms through finite element simulation, physical test validation,
+    injury criteria, and peer-reviewed scientific literature.
+  fea_mechanics: >-
+    Mechanical Engineering MASc graduate with experience in finite element modeling, model
+    validation, impact mechanics, and dynamic simulation.
+  vehicle_safety_long: >-
+    Recent MASc graduate in mechanical engineering with experience in vehicle safety, impact
+    biomechanics, finite element modelling, physical test data analysis, literature review,
+    and technical writing. Graduate research focused on validating a THOR-5F FE model and
+    evaluating how seat-belt anchor locations affected rear-seat occupant response in frontal
+    impacts.
+
+skills:
+  rows:
+    design_proto:
+      category: Design \& Prototyping
+      items: [SolidWorks, Onshape, 3D Printing, Lathe, Mill, Bandsaw, Drill Press]
+    design_proto_drawings:
+      category: Design \& Prototyping
+      items: [SolidWorks, Onshape, Engineering Drawings, 3D Printing, Lathe, Mill, Bandsaw, Drill Press]
+    controls_instr:
+      category: Controls \& Instrumentation
+      items: [Arduino, Sensors, Motors, Data Acquisition, Circuit Design, Altium, LTspice]
+    testing_analysis:
+      category: Testing \& Analysis
+      items: [DOE, JMP, Minitab, MATLAB, Microsoft Excel, Troubleshooting]
+    sim_programming:
+      category: Simulation \& Programming
+      items: [FEA, LS-DYNA, LS-PrePost, Python, C/C++]
+    occ_safety_crash:
+      category: Occupant Safety and Crash Analysis
+      items: [LS-DYNA, nonlinear FEA, explicit dynamics, crash simulation, injury biomechanics]
+    model_dev_val:
+      category: Model Development and Validation
+      items: [FE model validation, physical test correlation, ISO 18571, material models, contact, boundary conditions]
+    sim_data_crash:
+      category: Simulation and Data Analysis
+      items: [LS-PrePost, MATLAB, JMP, design of experiments (DOE), Python, Microsoft Excel]
+    cad_engineering:
+      category: CAD and Engineering
+      items: [SolidWorks, engineering drawings, technical reports, technical presentations]
+    injury_biomech:
+      category: Injury Biomechanics
+      items: [HIC15, Nij, chest deflection, AIS injury risk, injury-criteria interpretation, THOR-5F, Hybrid III, GHBMC]
+    sim_data_biomech:
+      category: Simulation and Data Analysis
+      items: [LS-DYNA, LS-PrePost, FEA, FE model validation, ISO 18571, design of experiments (DOE), JMP]
+    programming_tools:
+      category: Programming and Engineering Tools
+      items: [MATLAB, Python, C/C++, LS-PrePost scripting, Microsoft Excel, SolidWorks]
+    tech_comm:
+      category: Technical Communication
+      items: [Scientific literature reviews, technical reports, technical presentations, work instructions, SOPs]
+    fea:
+      category: Finite Element Analysis
+      items: [LS-DYNA, LS-PrePost, nonlinear FEA, material modeling, contact, boundary conditions]
+    cad_mech_design:
+      category: CAD and Mechanical Design
+      items: [SolidWorks, Onshape, engineering drawings, 3D printing]
+    programming_data:
+      category: Programming and Data Analysis
+      items: [MATLAB, Python, JMP, DOE, Microsoft Excel, C/C++]
+    model_val_testing:
+      category: Model Validation and Testing
+      items: [FE model validation, physical test correlation, ISO 18571, experimental data analysis]
+    project_eng_val:
+      category: Project Engineering \& Validation
+      items: [Testing \& validation, DOE, troubleshooting, process improvement, technical problem-solving]
+    documentation_mfg:
+      category: Documentation \& Manufacturing
+      items: [SOPs, work instructions, engineering drawings, technical reports, customer specifications]
+  # Skills you genuinely have that are not in any row yet. A recipe may "add" an
+  # item to a row only if it appears in some row above or in this list.
+  # Only list things you would defend in an interview.
+  extra_vocabulary: [HyperMesh, Primer, GD\&T, LaTeX]
+
+education:
+  waterloo:
+    institution: University of Waterloo
+    degree: Master of Applied Science in Mechanical and Mechatronics Engineering
+    location: Waterloo, ON, Canada
+    dates: Sep 2023 - Jul 2026
+    notes:
+      research_occ_safety: Research in occupant safety and biomechanics
+      research_crashworthiness: Research in occupant restraint crashworthiness and injury biomechanics
+      research_fea: Research in impact mechanics, finite element analysis, and model validation
+      coursework_avg: 'Graduate coursework average: 90\%'
+  ubc:
+    institution: University of British Columbia
+    degree: Bachelor of Applied Science in Mechanical Engineering, Co-op Program
+    location: Vancouver, BC, Canada
+    dates: Sep 2018 - May 2023
+    notes:
+      option: Biomechanics and Medical Devices Option
+      option_coursework: Biomechanics and Medical Devices Option with coursework in human anatomy, physiology, biomaterials, and biomedical design
+
+experience:
+  waterloo_gra:
+    org: University of Waterloo
+    role: Graduate Research Student - Impact Mechanics and Material Characterization Group
+    location: Waterloo, ON, Canada
+    dates: Sep 2023 - Jul 2026
+    bullets:
+      doe_jmp:
+        group: doe
+        text: >-
+          Ran a 104-configuration LS-DYNA DOE and used JMP to quantify geometry effects on
+          occupant response, identifying a configuration with 16\% lower peak chest deflection
+      doe_restraint:
+        group: doe
+        text: >-
+          Designed and analyzed a 104-simulation DOE-based FE parametric study evaluating the
+          effect of seat belt restraint anchor locations on rear seat occupant response,
+          identifying a rearward and inboard position that reduced peak chest deflection by
+          16\% below the study average
+      doe_anchor:
+        group: doe
+        text: >-
+          Designed and analyzed a 104-simulation DOE-based FE parametric study evaluating the
+          effect of seat belt anchor locations on rear seat occupant response, identifying a
+          rearward and inboard position that reduced peak chest deflection by 16\% below the
+          study average
+      doe_stats:
+        group: doe
+        text: >-
+          Designed and analyzed a 104-simulation FE parametric study of seat belt anchor
+          locations using JMP DOE, least-squares regression, and ANOVA; identified a rearward
+          and inboard position with 16\% lower peak chest deflection than the study average
+      validate_short:
+        group: validate
+        text: >-
+          Validated simulations against physical tests across two configurations and 10
+          response channels, achieving a 0.71 average ISO 18571 correlation score
+      validate_thor:
+        group: validate
+        text: >-
+          Validated a THOR-5F ATD finite element model against physical sled testing in two
+          bench configurations in LS-DYNA, achieving an average ISO 18571 score of 0.71
+          across 10 measurement channels
+      validate_thor_fe:
+        group: validate
+        text: >-
+          Validated a THOR-5F ATD FE model against physical sled testing in two bench
+          configurations in LS-DYNA, achieving an average ISO 18571 score of 0.71 across 10
+          measurement channels
+      discrepancy_troubleshoot:
+        group: discrepancy
+        text: >-
+          Troubleshot model-to-test discrepancies in positioning, restraint fit, and response
+          timing to improve agreement with physical tests
+      discrepancy_material:
+        group: discrepancy
+        text: >-
+          Investigated material response, contact interactions, boundary conditions, and model
+          behavior to understand discrepancies between simulation predictions and experimental
+          measurements
+      discrepancy_fit:
+        group: discrepancy
+        text: >-
+          Investigated material response, contact, boundary conditions, occupant positioning,
+          and restraint fit to understand simulation-to-test discrepancies
+      script_automate:
+        group: script
+        text: >-
+          Automated seat belt fitting with LS-PrePost scripts, reducing repeated setup steps
+          by 43\% (7 to 4)
+      script_standardize:
+        group: script
+        text: >-
+          Standardized seat belt workflow through LS-PrePost scripts, reducing setup from 7
+          steps to 4
+      communicate:
+        text: >-
+          Communicated findings through a master's thesis, conference paper, technical
+          reports, and six sponsor presentations
+
+  waterloo_ta:
+    org: University of Waterloo
+    role: 'Teaching Assistant - MTE 120: Circuits'
+    location: Waterloo, ON, Canada
+    dates: May 2024 - Aug 2024
+    bullets:
+      ta_short:
+        group: ta
+        text: >-
+          Supported laboratory instruction for a 100+ student circuits course, troubleshooting
+          hardware and providing feedback on lab work and exams
+      ta_measurement:
+        group: ta
+        text: >-
+          Supported laboratory instruction for a 100+ student circuits course, troubleshooting
+          circuit analysis, measurement, and hardware issues and providing feedback on
+          laboratory work and exams
+      ta_assisting:
+        group: ta
+        text: >-
+          Supported laboratory instruction for a 100+ student circuits course, assisting
+          students with circuit analysis and measurement, troubleshooting hardware issues, and
+          providing feedback on laboratory work and exams
+
+  echoscope:
+    org: Echoscope
+    role: R\&D Engineer (Part-time)
+    location: Remote
+    dates: May 2023 - Sep 2023
+    bullets:
+      pcb:
+        text: >-
+          Designed and iterated the bladder testing platform PCB, integrating pressure sensing,
+          Arduino connections, power distribution, and motor and valve interfaces; refined
+          component placement and routing and completed design-rule checks
+      procedures:
+        group: procedures
+        text: >-
+          Authored five manufacturing and verification procedures covering PCB assembly,
+          wiring, software setup, and functionality testing; all five were approved and used
+          by the client
+      procedures_functional:
+        group: procedures
+        text: >-
+          Authored five manufacturing and verification procedures covering PCB assembly,
+          wiring, software setup, and functional testing; all five were approved and used by
+          the client
+
+  chli:
+    org: Centre for Heart Lung Innovation
+    role: Summer Research Student
+    location: Vancouver, BC, Canada (Remote)
+    dates: May 2022 - Aug 2022
+    bullets:
+      notebook:
+        text: >-
+          Built a Jupyter Notebook transfer-learning script to diagnose diabetic kidney disease
+          using an emerging imaging platform
+      accuracy:
+        text: >-
+          Improved diagnostic accuracy by 10\% through model optimization, training refinement,
+          and comparison with existing tissue-slide images
+
+  gn:
+    org: GN Corporation
+    role: Mechanical Engineering Intern
+    location: Airdrie, AB, Canada
+    dates: Jan 2022 - Apr 2022
+    bullets:
+      sop_reviewing:
+        group: sop
+        text: >-
+          Developed standardized work instructions and SOPs by reviewing engineering drawings,
+          customer specifications, and existing manufacturing processes
+      sop_verified:
+        group: sop
+        text: >-
+          Created standardized work instructions and SOPs verified against engineering drawings
+          and customer specifications
+      waste:
+        group: [waste]
+        text: Reduced fiberglass cutting waste by 50\% through process analysis
+      pickplace:
+        group: [pickplace]
+        text: >-
+          Proposed a material-handling process improvement projected to reduce pick-and-place
+          time by 50\%
+      waste_pickplace_halve:
+        group: [waste, pickplace]
+        text: >-
+          Reduced fiberglass cutting waste by 50\% through process analysis, and proposed a
+          material handling workflow projected to halve pick-and-place time
+      waste_pickplace_composite:
+        group: [waste, pickplace]
+        text: >-
+          Reduced fiberglass composite cutting waste by 50\% through process analysis and
+          proposed a material-handling workflow projected to reduce pick-and-place time by 50\%
+
+  breathe:
+    org: Breathe Global
+    role: Engineering Intern
+    location: Victoria, BC, Canada
+    dates: Jul 2021 - Aug 2021
+    bullets:
+      circuit:
+        text: >-
+          Redesigned the analog control circuit for a negative-pressure breathing device in
+          Altium, using LTspice simulation to select low-cost components
+      range:
+        text: Expanded the device's achievable breathing range from 70\% to 88\% of target
+
+projects:
+  foam:
+    org: University of Waterloo
+    title: Effect of Seat Foam Properties on Injury Response in Rear Impact (ME 725 Course Project)
+    location: Waterloo, ON, Canada
+    dates: Jan 2024 - Apr 2024
+    bullets:
+      verify:
+        group: foam_verify
+        text: >-
+          Verified 5 polyurethane foam material models in LS-DYNA against input stress-strain
+          response using single-element simulations, then implemented them in a rear-impact
+          sled model with a Hybrid III ATD to calculate HIC15 and Nij injury metrics
+      verify_words:
+        group: foam_verify
+        text: >-
+          Verified five polyurethane foam material models in LS-DYNA against input
+          stress-strain response using single-element simulations, then implemented them in a
+          rear-impact sled model with a Hybrid III ATD to calculate HIC15 and Nij injury
+          metrics
+      result:
+        group: foam_result
+        text: >-
+          Determined that all 5 foams met the regulatory head injury limit but exceeded the
+          regulatory neck injury limit at high speed, and that the softest foam reduced head
+          injury risk by roughly 18--20\% relative to the stiffest
+      result_words:
+        group: foam_result
+        text: >-
+          Determined that all five foams met the regulatory head injury limit but exceeded the
+          regulatory neck injury limit at high speed, and that the softest foam reduced head
+          injury risk by roughly 18--20\% relative to the stiffest
+
+  cervical:
+    org: University of Waterloo
+    title: Simulation of Cervical Fractures in American Football (ME 720 Course Project)
+    location: Waterloo, ON, Canada
+    dates: Sep 2023 - Dec 2023
+    bullets:
+      simulate:
+        text: >-
+          Simulated head-first helmet impacts across three velocities (3.4--7.0 m/s) and three
+          neck angles at the lowest speed condition using Hybrid III and GHBMC human body
+          models in LS-DYNA, then evaluated fracture force thresholds and injury location
+          against peer-reviewed literature
+      result:
+        text: >-
+          Discovered that predicted peak neck forces (2.26--2.34 kN) fell within the range
+          reported across two cadaveric studies, and that the Neck Injury Criterion exceeded
+          its injury-risk threshold in only 1 of 5 configurations despite fracture occurring in
+          all 5
+
+  capstone:
+    org: University of British Columbia
+    title: Soft Distensible Bladder Model - Capstone Project
+    location: Vancouver, BC, Canada
+    dates: Sep 2022 - Apr 2023
+    bullets:
+      phantoms:
+        text: >-
+          Prototyped bladder phantoms using silicone and agar, comparing pressure-volume
+          response with literature to guide material selection
+      control_daq:
+        group: control
+        text: >-
+          Designed and built the control and data-acquisition interface for a pressurized
+          soft-bladder test system, enabling real-time pressure/volume monitoring and automated
+          filling/voiding cycles
+      control_params:
+        group: control
+        text: >-
+          Built a control interface for the soft bladder phantom, enabling real-time
+          pressure/volume data logging, PV/PT curve generation, and automated filling/voiding
+          cycles via four adjustable parameters (max volume, flow rate, jet duration, jet
+          interval)
+      validate:
+        group: capstone_validate
+        text: >-
+          Validated system performance using integrated pressure sensing and controls,
+          demonstrating stable and repeatable operation up to 4.75 kPa internal pressure
+      validate_detail:
+        group: capstone_validate
+        text: >-
+          Validated pressure chamber performance using the integrated sensor and control
+          system, demonstrating stable, repeatable pressurization at 2.2 kPa (13.8s ramp-up) up
+          to a maximum internal bladder pressure of 4.75 kPa
+      verify_requirements:
+        group: capstone_validate
+        text: >-
+          Verified the system against defined performance requirements, demonstrating stable,
+          repeatable operation up to 4.75 kPa internal pressure
+
+  uas:
+    org: UBC Unmanned Aircraft Systems (Student Design Team)
+    title: Payload Team Member
+    location: Vancouver, BC, Canada
+    dates: Sep 2019 - May 2021
+    bullets:
+      design:
+        text: >-
+          Designed and prototyped a payload drop system and rover in Onshape and SolidWorks,
+          iterating through 3D printed proof-of-concept builds
+      weight:
+        text: >-
+          Reduced payload system weight by 50\% by repurposing components from previous designs
+          during concept development
+
+  caris:
+    org: University of British Columbia Collaborative Advanced Robotics and Intelligent Systems (CARIS) Lab
+    title: Volunteer Researcher - Vacuum Injection Molding End-Effector (VIMEE) Gripper
+    location: Vancouver, BC, Canada
+    dates: Jan 2022 - Apr 2023
+    bullets:
+      arduino:
+        text: >-
+          Programmed Arduino-controlled LED signal patterns for pleat loading height and force
+          feedback and contributed to user testing of the complete system
+
+publications:
+  thesis: >-
+    \textbf{Thangarajah, P.} (2026). \emph{Assessment of seat belt anchor position on rear
+    seat occupant kinematics in frontal impact using a validated THOR-5F finite element
+    model}. Master of Applied Science thesis, University of Waterloo, Waterloo, ON, Canada.
+    hdl.handle.net/10012/23684
+  esv2026: >-
+    Watson, B., Seeburrun, T., \textbf{Thangarajah, P.}, Tang, K., Tylko, S., \& Cronin, D. S.
+    (2026). \emph{Experimental and numerical investigation of belt loading for small-stature
+    female occupants in rear seat frontal crash}. Proceedings of the 28th International
+    Technical Conference on the Enhanced Safety of Vehicles (ESV), Toronto, ON, Canada, May
+    12--15, 2026.
+  ibs2025: >-
+    \textbf{Thangarajah, P.}, Watson, B., Tang, K., Tylko, S., \& Cronin, D. (2025).
+    \emph{Analysis of rear seat shoulder belt anchor position on kinematics of small-stature
+    female occupants in frontal impact}. Injury Biomechanics Symposium, The Ohio State
+    University, Columbus, OH, USA, May 18--21, 2025.
+
+section_titles:               # allowed headings; a recipe may only pick from these
+  summary: [Summary]
+  skills: [Skills]
+  education: [Education]
+  experience: [Experience, Work/Research Experience]
+  projects: [Projects]
+  publications: [Conference Presentations and Publications, Publications]

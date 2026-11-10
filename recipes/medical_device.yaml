@@ -1,0 +1,24 @@
+# Rebuild of: Patrick Thangarajah- Resume- Medical Device CAD Design (Copy)
+name: medical_device
+target: Medical device design / CAD
+pages: 1
+headline: meddevice
+contact: [phone, email_gmail, linkedin, tn]
+summary: meddevice
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [design_proto_drawings, testing_analysis, controls_instr, sim_programming]
+education:
+  - waterloo: [research_crashworthiness]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [doe_jmp, validate_short, discrepancy_troubleshoot, script_automate, communicate]
+  - echoscope: [pcb, procedures_functional]
+  - gn: [sop_reviewing, waste_pickplace_composite]
+  - breathe: [circuit, range]
+projects:
+  - foam: [verify_words, result_words]
+  - capstone: [phantoms, control_daq, verify_requirements]
+  - uas: [design, weight]
+publications: [thesis, ibs2025]
+if_space: [projects.uas.weight, experience.waterloo_gra.communicate, projects.uas, projects.foam.result_words]

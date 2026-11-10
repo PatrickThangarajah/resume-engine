@@ -1,0 +1,23 @@
+# Rebuild of: Patrick_Thangarajah_SGH_Resume_Overleaf
+name: sgh
+target: SGH (engineering mechanics / FEA)
+pages: 1
+headline: fea_mechanics
+contact: [phone, email_gmail, linkedin, tn_short]
+summary: fea_mechanics
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills: [fea, cad_mech_design, programming_data, model_val_testing]
+education:
+  - waterloo: [research_fea]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor, discrepancy_fit, doe_stats, communicate, script_standardize]
+  - waterloo_ta: [ta_measurement]
+  - chli: [notebook, accuracy]
+  - gn: [sop_verified, waste_pickplace_halve]
+projects:
+  - cervical: [simulate, result]
+  - foam: [verify, result]
+publications: [thesis, esv2026, ibs2025]
+if_space: [experience.chli.notebook]

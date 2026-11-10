@@ -1,0 +1,24 @@
+# Rebuild of: Patrick_Thangarajah_Biokinetics_Overleaf
+name: biokinetics
+target: Biokinetics (forensic injury biomechanics)
+pages: 1
+headline: injury_biomech
+contact: [phone, email_gmail, linkedin, citizen, relocate]
+summary: injury_biomech
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills: [injury_biomech, sim_data_biomech, programming_tools, tech_comm]
+education:
+  - waterloo: [research_occ_safety]
+  - ubc: [option_coursework]
+experience:
+  - waterloo_gra: [validate_thor_fe, doe_anchor, communicate]
+  - waterloo_ta: [ta_assisting]
+  - chli: [notebook, accuracy]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - cervical: [simulate, result]
+  - capstone: [control_params, validate_detail]
+publications: [thesis, esv2026, ibs2025]
+if_space: [experience.breathe, experience.chli.notebook]

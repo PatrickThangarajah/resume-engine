@@ -1,0 +1,63 @@
+# Builds resume PDFs whenever a recipe, the bank or the layout changes,
+# then commits them to pdf/ so you can open them straight from GitHub.
+name: Build resumes
+
+on:
+  push:
+    branches: [main]
+    paths: ['bank.yaml', 'recipes/**', 'latex/**', 'build.py']
+  workflow_dispatch:          # "Run workflow" button rebuilds everything
+
+permissions:
+  contents: write
+
+concurrency: build-resumes
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Install XeLaTeX and PyYAML
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends \
+            texlive-xetex texlive-latex-base texlive-latex-recommended \
+            texlive-latex-extra texlive-pictures texlive-fonts-recommended \
+            lmodern python3-yaml
+
+      - name: Pick recipes to build
+        id: pick
+        run: |
+          changed=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || echo ALL)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$changed" = "ALL" ] \
+             || echo "$changed" | grep -qE '^(bank.yaml|latex/|build.py)'; then
+            files=$(ls recipes/*.yaml)
+          else
+            files=$(echo "$changed" | grep -E '^recipes/.*\.yaml$' | while read f; do [ -f "$f" ] && echo "$f"; done)
+          fi
+          echo "files=$(echo $files)" >> "$GITHUB_OUTPUT"
+          echo "Building: $files"
+
+      - name: Lint bank and build
+        if: steps.pick.outputs.files != ''
+        run: |
+          python3 build.py check
+          python3 build.py catalog > catalog.md
+          python3 build.py build ${{ steps.pick.outputs.files }} | tee build_report.txt
+          echo '```' >> "$GITHUB_STEP_SUMMARY"; cat build_report.txt >> "$GITHUB_STEP_SUMMARY"; echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save PDFs to pdf/
+        if: always() && steps.pick.outputs.files != ''
+        run: |
+          mkdir -p pdf/overleaf
+          cp out/*.pdf pdf/ 2>/dev/null || true
+          cp out/*_overleaf.zip pdf/overleaf/ 2>/dev/null || true
+          git config user.name "resume-bot"
+          git config user.email "resume-bot@users.noreply.github.com"
+          git add pdf catalog.md
+          git diff --cached --quiet || git commit -m "Build PDFs [skip ci]"
+          git push

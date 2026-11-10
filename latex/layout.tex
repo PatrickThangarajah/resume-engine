@@ -1,0 +1,97 @@
+% =============================================================================
+%  layout.tex: the ONLY place spacing is set.
+%  Change a number here and every resume changes the same way.
+%  Works on Overleaf's TeX Live 2019 (plain LaTeX2e commands only).
+% =============================================================================
+
+% --- page --------------------------------------------------------------------
+\geometry{left=1.0cm, top=0.5cm, right=1.0cm, bottom=0.3cm, footskip=0.25cm}
+\colorlet{awesome}{awesome-darknight}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\RequirePackage{tabularx}
+\setlength{\parskip}{0pt}   % awesome-cv loads parskip; spacing is set explicitly below instead
+
+% --- the dials -----------------------------------------------------------------
+\newlength{\SectionGap}   \setlength{\SectionGap}{1.5mm}   % space above each section title
+\newlength{\EntryGap}     \setlength{\EntryGap}{0.9mm}     % space between two entries
+\newlength{\BulletLead}   \setlength{\BulletLead}{0.3mm}   % entry header -> first bullet
+\newlength{\PubGap}       \setlength{\PubGap}{0.8mm}       % between publications
+\newlength{\ContentLead}  \setlength{\ContentLead}{0.8mm}   % section rule -> first line
+\newlength{\ParaAfter}    \setlength{\ParaAfter}{0.5mm}    % after the summary paragraph
+
+% build.py may shrink every gap by the same factor (GapScale) to fit the page,
+% so spacing always stays uniform. 1 = normal.
+\providecommand{\GapScale}{1}
+\setlength{\SectionGap}{\GapScale\SectionGap}
+\setlength{\EntryGap}{\GapScale\EntryGap}
+\setlength{\BulletLead}{\GapScale\BulletLead}
+\setlength{\PubGap}{\GapScale\PubGap}
+\setlength{\ContentLead}{\GapScale\ContentLead}
+\setlength{\ParaAfter}{\GapScale\ParaAfter}
+
+% --- section heading (same look as awesome-cv, fixed spacing) -----------------
+\renewcommand{\acvSectionTopSkip}{\SectionGap}
+\renewcommand{\acvSectionContentTopSkip}{0mm}
+
+% --- summary -------------------------------------------------------------------
+\newcommand{\ResumeSummary}[1]{%
+  \par\vspace{\ContentLead}{\paragraphstyle #1\par}\vspace{\ParaAfter}}
+
+% --- skills ----------------------------------------------------------------------
+%  build.py calls \MeasureSkill on every category first, so the label column is
+%  exactly as wide as the longest category and nothing runs into the margin.
+\newlength{\SkillW}\newlength{\SkillTmp}
+\newcommand{\MeasureSkill}[1]{%
+  \settowidth{\SkillTmp}{\skilltypestyle{#1}}%
+  \ifdim\SkillTmp>\SkillW\setlength{\SkillW}{\SkillTmp}\fi}
+\newenvironment{ResumeSkills}{%
+  \par\vspace{\ContentLead}\noindent
+  \setlength\tabcolsep{0pt}\setlength{\extrarowheight}{0pt}%
+  \renewcommand{\arraystretch}{1.0}%
+  \begin{tabular}{@{}r@{\hspace{1.5ex}}>{\raggedright\arraybackslash\leavevmode}p{\dimexpr\textwidth-\SkillW-1.5ex\relax}@{}}
+}{%
+  \end{tabular}\par
+}
+\newcommand{\ResumeSkill}[2]{\skilltypestyle{#1} & \skillsetstyle{#2} \\}
+
+% --- one entry (job, degree, project) -------------------------------------------
+%  \ResumeEntry{bold title}{small line under it}{location}{dates}
+\newcommand{\ResumeEntry}[4]{%
+  \par\noindent
+  \setlength\tabcolsep{0pt}\setlength{\extrarowheight}{0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#2} & \entrydatestyle{#4} \\
+  \end{tabular*}\par
+}
+\newcommand{\NextEntry}{\par\vspace{\EntryGap}}
+
+% --- bullets -------------------------------------------------------------------
+\newenvironment{ResumeBullets}{%
+  \par\vspace{\BulletLead}%
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep, topsep=0pt, partopsep=0pt]
+    \setlength{\parskip}{0pt}%
+    \justifying
+    \renewcommand{\labelitemi}{\bullet}%
+}{%
+  \end{itemize}\par
+}
+\newcommand{\EntriesStart}{\par\vspace{\ContentLead}}
+
+% --- publications ------------------------------------------------------------------
+\newenvironment{ResumePubs}{%
+  \par\vspace{\ContentLead}\small
+  \begin{itemize}[leftmargin=2ex, nosep, topsep=0pt, partopsep=0pt, itemsep=\PubGap]
+    \setlength{\parskip}{0pt}%
+    \renewcommand{\labelitemi}{\bullet}%
+}{%
+  \end{itemize}\par
+}
+
+% --- text styles (override awesome-cv defaults) --------------------------------
+%  Body text at 10pt regular weight: recruiters skim, and 9pt light is hard to read.
+\newcommand{\BodySize}{10pt}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{\BodySize}{1.05em}\bodyfont\upshape\color{text} #1}}
+\renewcommand*{\paragraphstyle}{\fontsize{\BodySize}{1.05em}\bodyfont\upshape\color{text}}
+\renewcommand*{\skillsetstyle}[1]{{\fontsize{\BodySize}{1.05em}\bodyfont\color{text} #1}}

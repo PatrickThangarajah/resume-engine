@@ -1,0 +1,24 @@
+# Rebuild of: Patrick Thangarajah- Resume-Automotive
+name: automotive
+target: Automotive occupant safety CAE
+pages: 1
+headline: fea_biomech
+contact: [phone, email_gmail, linkedin, tn]
+summary: fea_occupant
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills: [occ_safety_crash, model_dev_val, sim_data_crash, cad_engineering]
+education:
+  - waterloo: [research_occ_safety]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor, discrepancy_material, doe_restraint, communicate]
+  - waterloo_ta: [ta_measurement]
+  - chli: [notebook, accuracy]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - cervical: [simulate, result]
+  - foam: [verify, result]
+publications: [thesis, esv2026, ibs2025]
+if_space: [experience.breathe, experience.chli.notebook, experience.waterloo_ta]
