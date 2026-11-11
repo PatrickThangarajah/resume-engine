@@ -6,6 +6,7 @@ Resume engine: recipe (IDs only) + bank (your words) -> LaTeX -> PDF.
   python build.py catalog                    print the ID menu to paste into an AI
   python build.py build recipes/x.yaml       validate, render, compile, fit to page
   python build.py build recipes/*.yaml       several at once
+  python build.py letter letters/x.yaml      build a cover letter (same look as the Overleaf one)
 
 The AI never writes text. It only returns a recipe. This script copies your
 exact wording from bank.yaml into one fixed layout, so wording and spacing
@@ -443,9 +444,75 @@ def build(recipe_path, bank):
     return pages <= target
 
 
+# --------------------------------------------------------------------------- letters
+LETTER_KEYS = {"name", "headline", "contact", "recipient", "address", "date", "title",
+               "opening", "closing", "body"}
+
+
+def tex_escape(t):
+    """Plain text (e.g. pasted from ChatGPT) -> LaTeX. Your words are not changed."""
+    t = t.replace("\\", "/")
+    for ch in "&%$#_":
+        t = t.replace(ch, "\\" + ch)
+    return t.replace("~", "\\textasciitilde{}").replace("^", "\\textasciicircum{}")
+
+
+def build_letter(path, bank):
+    import datetime
+    L = load_yaml(path)
+    unknown = set(L) - LETTER_KEYS
+    need(not unknown, f"unknown letter keys: {sorted(unknown)} (allowed: {sorted(LETTER_KEYS)})")
+    for k in ("name", "headline", "recipient", "title", "body"):
+        need(L.get(k), f"{k}: required")
+    need(re.fullmatch(r"[A-Za-z0-9_\-]+", L["name"]), "name: letters/numbers/_/- only")
+    need(L["headline"] in bank["headlines"],
+         f"headline: {L['headline']!r} not in bank{suggest(L['headline'], bank['headlines'])}")
+    contact = L.get("contact") or ["location", "phone", "email_uw", "linkedin"]
+    for c in contact:
+        need(c in bank["contact"], f"contact: {c!r} not in bank{suggest(c, bank['contact'])}")
+    body = str(L["body"]).strip()
+    for bad, why in (("—", "em dash"), (" – ", "spaced en dash"), (" - ", "spaced hyphen used as a dash")):
+        need(bad not in body, f"body: contains a {why}; rewrite that sentence without it")
+    paras = [clean(p) for p in re.split(r"\n\s*\n", body) if p.strip()]
+    need(paras, "body: empty")
+    date = L.get("date") or datetime.date.today()
+    if not isinstance(date, str):
+        date = f"{date.day} {date.strftime('%B %Y')}"
+    fill = {
+        "HEADLINE": clean(bank["headlines"][L["headline"]]),
+        "CONTACT": " | ".join(clean(bank["contact"][c]) for c in contact),
+        "RECIPIENT": tex_escape(L["recipient"]),
+        "ADDRESS": " \\newline ".join(tex_escape(a) for a in (L.get("address") or [])),
+        "DATE": tex_escape(str(date)),
+        "TITLE": tex_escape(L["title"]),
+        "OPENING": tex_escape(L.get("opening") or f"Dear {L['recipient']},"),
+        "CLOSING": tex_escape(L.get("closing") or "Sincerely,"),
+        "BODY": "\n\n".join(tex_escape(p) for p in paras),
+    }
+    tex = (LATEX / "letter_template.tex").read_text(encoding="utf-8")
+    for k, v in fill.items():
+        tex = tex.replace(f"<<{k}>>", v)
+    work = OUT / f"letter_{L['name']}"
+    if work.exists():
+        shutil.rmtree(work)
+    shutil.copytree(LATEX, work, ignore=shutil.ignore_patterns("shim", "layout.tex", "letter_template.tex"))
+    (work / "main.tex").write_text(tex, encoding="utf-8")
+    pages, _ = compile_tex(work)
+    pdf = OUT / f"Patrick_Thangarajah_Cover_Letter_{L['name']}.pdf"
+    shutil.copy(work / "main.pdf", pdf)
+    z = OUT / f"letter_{L['name']}_overleaf.zip"
+    with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as zf:
+        for f in work.rglob("*"):
+            if f.is_file() and f.suffix not in (".aux", ".log", ".out", ".pdf"):
+                zf.write(f, f.relative_to(work))
+    status = "OK" if pages == 1 else f"OVER: {pages} pages, trim the body"
+    print(f"[{status}] letter {L['name']}: {pages} page(s), {len(' '.join(paras).split())} words -> {pdf.relative_to(ROOT)}")
+    return pages == 1
+
+
 # --------------------------------------------------------------------------- main
 def main(argv):
-    if len(argv) < 2 or argv[1] not in ("check", "catalog", "build"):
+    if len(argv) < 2 or argv[1] not in ("check", "catalog", "build", "letter"):
         print(__doc__)
         return 1
     bank = load_yaml(BANK)
@@ -463,7 +530,7 @@ def main(argv):
     ok = True
     for p in argv[2:]:
         try:
-            ok &= build(p, bank)
+            ok &= (build_letter if argv[1] == "letter" else build)(p, bank)
         except RecipeError as e:
             print(f"[REJECTED] {p}\n   {e}")
             ok = False

@@ -5,7 +5,7 @@ name: Build resumes
 on:
   push:
     branches: [main]
-    paths: ['bank.yaml', 'recipes/**', 'latex/**', 'build.py']
+    paths: ['bank.yaml', 'recipes/**', 'letters/**', 'latex/**', 'build.py']
   workflow_dispatch:          # "Run workflow" button rebuilds everything
 
 permissions:
@@ -43,15 +43,16 @@ jobs:
           echo "Building: $files"
 
       - name: Lint bank and build
-        if: steps.pick.outputs.files != ''
         run: |
           python3 build.py check
           python3 build.py catalog > catalog.md
-          python3 build.py build ${{ steps.pick.outputs.files }} | tee build_report.txt
+          touch build_report.txt
+          if [ -n "${{ steps.pick.outputs.files }}" ]; then python3 build.py build ${{ steps.pick.outputs.files }} | tee -a build_report.txt; fi
+          if ls letters/*.yaml >/dev/null 2>&1; then python3 build.py letter letters/*.yaml | tee -a build_report.txt; fi
           echo '```' >> "$GITHUB_STEP_SUMMARY"; cat build_report.txt >> "$GITHUB_STEP_SUMMARY"; echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Save PDFs to pdf/
-        if: always() && steps.pick.outputs.files != ''
+        if: always()
         run: |
           mkdir -p pdf/overleaf
           cp out/*.pdf pdf/ 2>/dev/null || true
