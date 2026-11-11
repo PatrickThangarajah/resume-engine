@@ -61,7 +61,7 @@
 \newcommand{\ResumeEntry}[4]{%
   \par\noindent
   \setlength\tabcolsep{0pt}\setlength{\extrarowheight}{0pt}%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 5.4cm} R{5.4cm}}
     \entrytitlestyle{#1} & \entrylocationstyle{#3} \\
     \entrypositionstyle{#2} & \entrydatestyle{#4} \\
   \end{tabular*}\par
@@ -82,7 +82,7 @@
 
 % --- publications ------------------------------------------------------------------
 \newenvironment{ResumePubs}{%
-  \par\vspace{\ContentLead}\small\raggedright
+  \par\vspace{\ContentLead}\fontsize{\SmallSize}{1.05em}\selectfont\raggedright
   \begin{itemize}[leftmargin=2ex, nosep, topsep=0pt, partopsep=0pt, itemsep=\PubGap]
     \setlength{\parskip}{0pt}%
     \renewcommand{\labelitemi}{\bullet}%
@@ -96,6 +96,22 @@
 \renewcommand*{\descriptionstyle}[1]{{\fontsize{\BodySize}{1.05em}\bodyfont\upshape\color{text} #1}}
 \renewcommand*{\paragraphstyle}{\fontsize{\BodySize}{1.05em}\bodyfont\upshape\color{text}}
 \renewcommand*{\skillsetstyle}[1]{{\fontsize{\BodySize}{1.05em}\bodyfont\color{text} #1}}
+
+%  Three sizes only: name, section titles, everything else at body size.
+\newcommand{\NameSize}{18pt}
+\newcommand{\HeadSize}{11pt}
+\newcommand{\SmallSize}{9pt}   % contact line and citations: long lines, kept one step smaller
+\makeatletter
+\renewcommand*{\headerfirstnamestyle}[1]{{\fontsize{\NameSize}{1em}\headerfont\color{text} #1}}
+\renewcommand*{\headerlastnamestyle}[1]{{\fontsize{\NameSize}{1em}\headerfont\color{text} #1}}
+\renewcommand*{\headerpositionstyle}[1]{{\fontsize{\BodySize}{1em}\bodyfont\scshape\color{awesome} #1}}
+\renewcommand*{\headeraddressstyle}[1]{{\fontsize{\SmallSize}{1em}\headerfont\itshape\color{lighttext} #1}}
+\renewcommand*{\headersocialstyle}[1]{{\fontsize{\SmallSize}{1em}\headerfont\color{text} #1}}
+\renewcommand*{\sectionstyle}[1]{{\fontsize{\HeadSize}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{\BodySize}{1em}\bodyfont\color{graytext} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{\BodySize}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{\BodySize}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\makeatother
 
 % --- key result numbers ----------------------------------------------------------
 %  bank.yaml wraps one result per bullet in \metric{...}; a recipe turns bolding on

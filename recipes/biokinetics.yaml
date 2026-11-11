@@ -22,4 +22,4 @@ projects:
   - cervical: [simulate, result]
   - capstone: [control_params, validate_detail]
 publications: [thesis, esv2026, ibs2025]
-if_space: [experience.breathe, experience.chli.notebook]
+if_space: [experience.breathe, experience.chli.notebook, experience.waterloo_ta]

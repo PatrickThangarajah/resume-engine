@@ -21,4 +21,4 @@ projects:
   - cervical: [simulate, result]
   - foam: [verify, result]
 publications: [thesis, esv2026, ibs2025]
-if_space: [experience.chli.notebook]
+if_space: [experience.chli.notebook, experience.chli]
