@@ -5,8 +5,8 @@ pages: 1
 bold_metrics: false     # true = bold the key result number in each bullet
 headline: fea_biomech
 contact: [phone, email_gmail, linkedin, tn]
-summary: fea_occupant
-sections: [summary, skills, education, experience, projects, publications]
+summary: fea_occupant     # not shown: removed from sections (direct fit, summary adds little)
+sections: [skills, education, experience, projects, publications]
 titles: {experience: Work/Research Experience}
 skills: [occ_safety_crash, model_dev_val, sim_data_crash, cad_engineering]
 education:
