@@ -7,6 +7,7 @@ Resume engine: recipe (IDs only) + bank (your words) -> LaTeX -> PDF.
   python build.py build recipes/x.yaml       validate, render, compile, fit to page
   python build.py build recipes/*.yaml       several at once
   python build.py letter letters/x.yaml      build a cover letter (same look as the Overleaf one)
+  python build.py text recipes/x.yaml        plain-text resume to paste into GC Jobs, Workday, etc.
 
 The AI never writes text. It only returns a recipe. This script copies your
 exact wording from bank.yaml into one fixed layout, so wording and spacing
@@ -444,6 +445,55 @@ def build(recipe_path, bank):
     return pages <= target
 
 
+# --------------------------------------------------------------------------- plain text
+def build_text(recipe_path, bank):
+    """Plain-text resume for forms like GC Jobs or Workday: same words, no layout,
+    and no page limit, so nothing from the recipe is trimmed."""
+    recipe = load_yaml(recipe_path)
+    validate(recipe, bank)
+
+    def p(t):
+        t = clean(t).replace("\\&", "&").replace("\\%", "%").replace("\\#", "#").replace("\\_", "_")
+        t = t.replace("--", "\u2013")
+        return re.sub(r"\\(textbf|emph|metric)\{([^}]*)\}", r"\2", t)
+
+    L = ["PATRICK THANGARAJAH"]
+    contact = recipe.get("contact") or ["phone", "email_gmail", "linkedin"]
+    L.append(" | ".join(p(bank["contact"][c]) for c in contact))
+    titles = {s_: bank["section_titles"][s_][0] for s_ in SECTIONS}
+    titles.update(recipe.get("titles") or {})
+    for sec in recipe.get("sections", SECTIONS):
+        L += ["", titles[sec].upper()]
+        if sec == "summary":
+            L.append(p(bank["summaries"][recipe["summary"]]))
+        elif sec == "skills":
+            rows = bank["skills"]["rows"]
+            for item in recipe["skills"]:
+                rid, mods = (item, {}) if isinstance(item, str) else next(iter(item.items()))
+                mods = mods or {}
+                items = [i for i in rows[rid]["items"] if i not in mods.get("remove", [])]
+                items += [a for a in mods.get("add", []) if a not in items]
+                L.append(f"{p(rows[rid]['category'])}: {', '.join(p(i) for i in items)}")
+        elif sec in ("education", "experience", "projects"):
+            for i, (k, bl) in enumerate(normalise_pairs(recipe[sec], sec)):
+                e = bank[sec][k]
+                if i:
+                    L.append("")
+                if sec == "education":
+                    L += [p(e["degree"]), f"{p(e['institution'])}, {p(e['location'])} | {e['dates']}"]
+                    L += [f"- {p(e['notes'][b])}" for b in bl or []]
+                else:
+                    head = e["role"] if sec == "experience" else e["title"]
+                    L += [p(head), f"{p(e['org'])}, {p(e['location'])} | {e['dates']}"]
+                    L += [f"- {p(e['bullets'][b]['text'])}" for b in bl]
+        elif sec == "publications":
+            L += [f"- {p(bank['publications'][x])}" for x in recipe["publications"]]
+    out = OUT / f"{NAME_ON_FILE}_{recipe['name']}.txt"
+    out.write_text("\n".join(L) + "\n", encoding="utf-8")
+    print(f"[OK] text {recipe['name']}: {len(L)} lines -> {out.relative_to(ROOT)}")
+    return True
+
+
 # --------------------------------------------------------------------------- letters
 LETTER_KEYS = {"name", "headline", "contact", "recipient", "address", "date", "title",
                "opening", "closing", "body"}
@@ -513,7 +563,7 @@ def build_letter(path, bank):
 
 # --------------------------------------------------------------------------- main
 def main(argv):
-    if len(argv) < 2 or argv[1] not in ("check", "catalog", "build", "letter"):
+    if len(argv) < 2 or argv[1] not in ("check", "catalog", "build", "letter", "text"):
         print(__doc__)
         return 1
     bank = load_yaml(BANK)
@@ -531,7 +581,7 @@ def main(argv):
     ok = True
     for p in argv[2:]:
         try:
-            ok &= (build_letter if argv[1] == "letter" else build)(p, bank)
+            ok &= {"letter": build_letter, "text": build_text}.get(argv[1], build)(p, bank)
         except RecipeError as e:
             print(f"[REJECTED] {p}\n   {e}")
             ok = False
