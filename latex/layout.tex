@@ -11,6 +11,7 @@
 
 \RequirePackage{tabularx}
 \setlength{\parskip}{0pt}   % awesome-cv loads parskip; spacing is set explicitly below instead
+\hyphenpenalty=10000        % never split a word across lines (keeps keywords whole for ATS)
 
 % --- the dials -----------------------------------------------------------------
 \newlength{\SectionGap}   \setlength{\SectionGap}{1.5mm}   % space above each section title
@@ -36,7 +37,7 @@
 
 % --- summary -------------------------------------------------------------------
 \newcommand{\ResumeSummary}[1]{%
-  \par\vspace{\ContentLead}{\paragraphstyle #1\par}\vspace{\ParaAfter}}
+  \par\vspace{\ContentLead}{\raggedright\paragraphstyle #1\par}\vspace{\ParaAfter}}
 
 % --- skills ----------------------------------------------------------------------
 %  build.py calls \MeasureSkill on every category first, so the label column is
@@ -72,7 +73,7 @@
   \par\vspace{\BulletLead}%
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep, topsep=0pt, partopsep=0pt]
     \setlength{\parskip}{0pt}%
-    \justifying
+    \raggedright
     \renewcommand{\labelitemi}{\bullet}%
 }{%
   \end{itemize}\par
@@ -81,7 +82,7 @@
 
 % --- publications ------------------------------------------------------------------
 \newenvironment{ResumePubs}{%
-  \par\vspace{\ContentLead}\small
+  \par\vspace{\ContentLead}\small\raggedright
   \begin{itemize}[leftmargin=2ex, nosep, topsep=0pt, partopsep=0pt, itemsep=\PubGap]
     \setlength{\parskip}{0pt}%
     \renewcommand{\labelitemi}{\bullet}%

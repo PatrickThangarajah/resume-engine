@@ -397,6 +397,22 @@ def build(recipe_path, bank):
         drop(recipe, step)
         validate(recipe, bank)
         dropped.append(step)
+    # Put back anything that turns out to fit, most important first.
+    if dropped and pages <= target:
+        for step in reversed(list(dropped)):
+            trial_drops = [d for d in dropped if d != step]
+            trial = load_yaml(recipe_path)
+            for d in trial_drops:
+                drop(trial, d)
+            for g in GAP_SCALES:
+                (work / "main.tex").write_text(render(trial, bank, g), encoding="utf-8")
+                p, o = compile_tex(work)
+                if p <= target:
+                    break
+            if p <= target:
+                dropped, recipe, gap, overfull = trial_drops, trial, g, o
+        (work / "main.tex").write_text(render(recipe, bank, gap), encoding="utf-8")
+        pages, overfull = compile_tex(work)
     pdf = OUT / f"{NAME_ON_FILE}_{name}.pdf"
     shutil.copy(work / "main.pdf", pdf)
     z = OUT / f"{name}_overleaf.zip"
