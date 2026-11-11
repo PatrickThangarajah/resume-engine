@@ -34,7 +34,7 @@ NAME_ON_FILE = "Patrick_Thangarajah_Resume"
 SECTIONS = ["summary", "skills", "education", "experience", "projects", "publications"]
 RECIPE_KEYS = {"name", "target", "pages", "headline", "contact", "summary", "sections",
                "titles", "skills", "education", "experience", "projects",
-               "publications", "if_space"}
+               "publications", "if_space", "bold_metrics"}
 
 
 class RecipeError(Exception):
@@ -88,6 +88,8 @@ def lint_text(where, text, problems):
     for k, why in BANNED.items():
         if k in t:
             problems.append(f"{where}: contains {k!r}: {why}")
+    if t.count("\\metric{") > 1:
+        problems.append(f"{where}: more than one \\metric{{}} (bold at most one result per bullet)")
     if t.count("{") != t.count("}"):
         problems.append(f"{where}: unbalanced braces")
 
@@ -132,7 +134,7 @@ def lint_bank(bank):
 # --------------------------------------------------------------------------- catalog
 def plain(t):
     t = clean(t).replace("\\&", "&").replace("\\%", "%").replace("--", "-")
-    return re.sub(r"\\(textbf|emph)\{([^}]*)\}", r"\2", t)
+    return re.sub(r"\\(textbf|emph|metric)\{([^}]*)\}", r"\2", t)
 
 
 def catalog(bank):
@@ -189,6 +191,7 @@ def validate(recipe, bank):
     need(recipe.get("name") and re.fullmatch(r"[A-Za-z0-9_\-]+", recipe["name"]),
          "name: required, letters/numbers/_/- only")
     need(recipe.get("pages", 1) in (1, 2), "pages: must be 1 or 2")
+    need(recipe.get("bold_metrics", False) in (True, False), "bold_metrics: must be true or false")
 
     need(recipe.get("headline") in bank["headlines"],
          f"headline: {recipe.get('headline')!r} not in bank{suggest(recipe.get('headline'), bank['headlines'])}")
@@ -272,6 +275,8 @@ def render(recipe, bank, gap=1.0):
     w("\\fontdir[fonts/]")
     w(f"\\newcommand{{\\GapScale}}{{{gap}}}")
     w("\\input{layout.tex}")
+    if recipe.get("bold_metrics"):
+        w("\\BoldMetricstrue")
     w("\\name{}{Patrick Thangarajah}")
     w(f"\\position{{{clean(bank['headlines'][recipe['headline']])}}}")
     contact = recipe.get("contact") or ["phone", "email_gmail", "linkedin"]

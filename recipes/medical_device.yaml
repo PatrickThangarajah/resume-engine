@@ -2,6 +2,7 @@
 name: medical_device
 target: Medical device design / CAD
 pages: 1
+bold_metrics: false     # true = bold the key result number in each bullet
 headline: meddevice
 contact: [phone, email_gmail, linkedin, tn]
 summary: meddevice

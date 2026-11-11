@@ -8,6 +8,8 @@
 #     all spacing lives in latex/layout.tex.
 #   * "group" marks bullets that say the same thing in different words.
 #     The builder refuses to put two bullets from the same group on one resume.
+#   * Wrap the one key result number of a bullet in \metric{...}. It prints in
+#     bold only when a recipe says  bold_metrics: true. At most one per bullet.
 #   * Run  python build.py check  after editing to lint the bank.
 # =============================================================================
 
@@ -154,43 +156,43 @@ experience:
         group: doe
         text: >-
           Ran a 104-configuration LS-DYNA DOE and used JMP to quantify geometry effects on
-          occupant response, identifying a configuration with 16\% lower peak chest deflection
+          occupant response, identifying a configuration with \metric{16\%} lower peak chest deflection
       doe_restraint:
         group: doe
         text: >-
           Designed and analyzed a 104-simulation DOE-based FE parametric study evaluating the
           effect of seat belt restraint anchor locations on rear seat occupant response,
           identifying a rearward and inboard position that reduced peak chest deflection by
-          16\% below the study average
+          \metric{16\%} below the study average
       doe_anchor:
         group: doe
         text: >-
           Designed and analyzed a 104-simulation DOE-based FE parametric study evaluating the
           effect of seat belt anchor locations on rear seat occupant response, identifying a
-          rearward and inboard position that reduced peak chest deflection by 16\% below the
+          rearward and inboard position that reduced peak chest deflection by \metric{16\%} below the
           study average
       doe_stats:
         group: doe
         text: >-
           Designed and analyzed a 104-simulation FE parametric study of seat belt anchor
           locations using JMP DOE, least-squares regression, and ANOVA; identified a rearward
-          and inboard position with 16\% lower peak chest deflection than the study average
+          and inboard position with \metric{16\%} lower peak chest deflection than the study average
       validate_short:
         group: validate
         text: >-
           Validated simulations against physical tests across two configurations and 10
-          response channels, achieving a 0.71 average ISO 18571 correlation score
+          response channels, achieving a \metric{0.71} average ISO 18571 correlation score
       validate_thor:
         group: validate
         text: >-
           Validated a THOR-5F ATD finite element model against physical sled testing in two
-          bench configurations in LS-DYNA, achieving an average ISO 18571 score of 0.71
+          bench configurations in LS-DYNA, achieving an average ISO 18571 score of \metric{0.71}
           across 10 measurement channels
       validate_thor_fe:
         group: validate
         text: >-
           Validated a THOR-5F ATD FE model against physical sled testing in two bench
-          configurations in LS-DYNA, achieving an average ISO 18571 score of 0.71 across 10
+          configurations in LS-DYNA, achieving an average ISO 18571 score of \metric{0.71} across 10
           measurement channels
       discrepancy_troubleshoot:
         group: discrepancy
@@ -212,12 +214,12 @@ experience:
         group: script
         text: >-
           Automated seat belt fitting with LS-PrePost scripts, reducing repeated setup steps
-          by 43\% (7 to 4)
+          by \metric{43\%} (7 to 4)
       script_standardize:
         group: script
         text: >-
-          Standardized seat belt workflow through LS-PrePost scripts, reducing setup from 7
-          steps to 4
+          Standardized seat belt workflow through LS-PrePost scripts, reducing setup from \metric{7
+          steps to 4}
       communicate:
         text: >-
           Communicated findings through a master's thesis, conference paper, technical
@@ -283,7 +285,7 @@ experience:
           using an emerging imaging platform
       accuracy:
         text: >-
-          Improved diagnostic accuracy by 10\% through model optimization, training refinement,
+          Improved diagnostic accuracy by \metric{10\%} through model optimization, training refinement,
           and comparison with existing tissue-slide images
 
   gn:
@@ -304,21 +306,21 @@ experience:
           and customer specifications
       waste:
         group: [waste]
-        text: Reduced fiberglass cutting waste by 50\% through process analysis
+        text: Reduced fiberglass cutting waste by \metric{50\%} through process analysis
       pickplace:
         group: [pickplace]
         text: >-
           Proposed a material-handling process improvement projected to reduce pick-and-place
-          time by 50\%
+          time by \metric{50\%}
       waste_pickplace_halve:
         group: [waste, pickplace]
         text: >-
-          Reduced fiberglass cutting waste by 50\% through process analysis, and proposed a
+          Reduced fiberglass cutting waste by \metric{50\%} through process analysis, and proposed a
           material handling workflow projected to halve pick-and-place time
       waste_pickplace_composite:
         group: [waste, pickplace]
         text: >-
-          Reduced fiberglass composite cutting waste by 50\% through process analysis and
+          Reduced fiberglass composite cutting waste by \metric{50\%} through process analysis and
           proposed a material-handling workflow projected to reduce pick-and-place time by 50\%
 
   breathe:
@@ -332,7 +334,7 @@ experience:
           Redesigned the analog control circuit for a negative-pressure breathing device in
           Altium, using LTspice simulation to select low-cost components
       range:
-        text: Expanded the device's achievable breathing range from 70\% to 88\% of target
+        text: Expanded the device's achievable breathing range from 70\% to \metric{88\%} of target
 
 projects:
   foam:
@@ -359,13 +361,13 @@ projects:
         text: >-
           Determined that all 5 foams met the regulatory head injury limit but exceeded the
           regulatory neck injury limit at high speed, and that the softest foam reduced head
-          injury risk by roughly 18--20\% relative to the stiffest
+          injury risk by roughly \metric{18--20\%} relative to the stiffest
       result_words:
         group: foam_result
         text: >-
           Determined that all five foams met the regulatory head injury limit but exceeded the
           regulatory neck injury limit at high speed, and that the softest foam reduced head
-          injury risk by roughly 18--20\% relative to the stiffest
+          injury risk by roughly \metric{18--20\%} relative to the stiffest
 
   cervical:
     org: University of Waterloo
@@ -383,7 +385,7 @@ projects:
         text: >-
           Discovered that predicted peak neck forces (2.26--2.34 kN) fell within the range
           reported across two cadaveric studies, and that the Neck Injury Criterion exceeded
-          its injury-risk threshold in only 1 of 5 configurations despite fracture occurring in
+          its injury-risk threshold in only \metric{1 of 5} configurations despite fracture occurring in
           all 5
 
   capstone:
@@ -413,18 +415,18 @@ projects:
         group: capstone_validate
         text: >-
           Validated system performance using integrated pressure sensing and controls,
-          demonstrating stable and repeatable operation up to 4.75 kPa internal pressure
+          demonstrating stable and repeatable operation up to \metric{4.75 kPa} internal pressure
       validate_detail:
         group: capstone_validate
         text: >-
           Validated pressure chamber performance using the integrated sensor and control
           system, demonstrating stable, repeatable pressurization at 2.2 kPa (13.8s ramp-up) up
-          to a maximum internal bladder pressure of 4.75 kPa
+          to a maximum internal bladder pressure of \metric{4.75 kPa}
       verify_requirements:
         group: capstone_validate
         text: >-
           Verified the system against defined performance requirements, demonstrating stable,
-          repeatable operation up to 4.75 kPa internal pressure
+          repeatable operation up to \metric{4.75 kPa} internal pressure
 
   uas:
     org: UBC Unmanned Aircraft Systems (Student Design Team)
@@ -438,7 +440,7 @@ projects:
           iterating through 3D printed proof-of-concept builds
       weight:
         text: >-
-          Reduced payload system weight by 50\% by repurposing components from previous designs
+          Reduced payload system weight by \metric{50\%} by repurposing components from previous designs
           during concept development
 
   caris:

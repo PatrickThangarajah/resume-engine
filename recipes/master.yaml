@@ -2,6 +2,7 @@
 name: master
 target: Everything, general hardware framing
 pages: 2
+bold_metrics: false     # true = bold the key result number in each bullet
 headline: sim_design
 contact: [location, phone, email_gmail, linkedin]
 summary: hardware

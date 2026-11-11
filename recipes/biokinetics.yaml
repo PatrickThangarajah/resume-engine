@@ -2,6 +2,7 @@
 name: biokinetics
 target: Biokinetics (forensic injury biomechanics)
 pages: 1
+bold_metrics: false     # true = bold the key result number in each bullet
 headline: injury_biomech
 contact: [phone, email_gmail, linkedin, citizen, relocate]
 summary: injury_biomech

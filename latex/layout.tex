@@ -96,3 +96,9 @@
 \renewcommand*{\descriptionstyle}[1]{{\fontsize{\BodySize}{1.05em}\bodyfont\upshape\color{text} #1}}
 \renewcommand*{\paragraphstyle}{\fontsize{\BodySize}{1.05em}\bodyfont\upshape\color{text}}
 \renewcommand*{\skillsetstyle}[1]{{\fontsize{\BodySize}{1.05em}\bodyfont\color{text} #1}}
+
+% --- key result numbers ----------------------------------------------------------
+%  bank.yaml wraps one result per bullet in \metric{...}; a recipe turns bolding on
+%  with  bold_metrics: true  (build.py then writes \BoldMetricstrue).
+\newif\ifBoldMetrics
+\newcommand{\metric}[1]{\ifBoldMetrics\textbf{#1}\else#1\fi}

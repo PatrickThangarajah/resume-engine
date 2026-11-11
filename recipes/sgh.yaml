@@ -2,6 +2,7 @@
 name: sgh
 target: SGH (engineering mechanics / FEA)
 pages: 1
+bold_metrics: false     # true = bold the key result number in each bullet
 headline: fea_mechanics
 contact: [phone, email_gmail, linkedin, tn_short]
 summary: fea_mechanics

@@ -2,6 +2,7 @@
 name: automotive
 target: Automotive occupant safety CAE
 pages: 1
+bold_metrics: false     # true = bold the key result number in each bullet
 headline: fea_biomech
 contact: [phone, email_gmail, linkedin, tn]
 summary: fea_occupant
