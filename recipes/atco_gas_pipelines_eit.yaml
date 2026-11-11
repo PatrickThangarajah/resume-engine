@@ -1,0 +1,25 @@
+# ATCO Gas & Pipelines - Engineer in Training / Engineer (job 20937), Calgary or Edmonton AB
+name: atco_gas_pipelines_eit
+target: ATCO Gas & Pipelines - EIT/Engineer (pipeline, piping, facilities project engineering)
+pages: 1
+bold_metrics: false
+headline: sim_design
+contact: [location, phone, email_uw, linkedin, citizen]
+summary: hardware     # not shown: no summary in the bank fits pipeline project work
+sections: [skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [documentation_mfg, project_eng_val, design_proto_drawings, sim_programming]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [communicate, validate_thor, doe_restraint, script_automate]
+  - waterloo_ta: [ta_short]
+  - echoscope: [procedures, pcb]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - capstone: [phantoms, control_daq, validate]
+  - uas: [design, weight]
+publications: [thesis]
+if_space: [projects.uas.weight, experience.breathe.range, projects.uas, experience.waterloo_gra.script_automate]
