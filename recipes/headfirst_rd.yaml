@@ -1,0 +1,25 @@
+# HeadFirst Inc. - R&D Scientist (WaterlooWorks 495305), deadline 2026-11-16
+name: headfirst_rd
+target: HeadFirst - R&D Scientist (concussion diagnostics)
+pages: 1
+bold_metrics: false
+headline: injury_biomech
+contact: [phone, email_uw, linkedin, citizen]
+summary: injury_biomech
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills: [tech_comm, testing_analysis, injury_biomech, controls_instr]
+education:
+  - waterloo: [research_occ_safety]
+  - ubc: [option_coursework]
+experience:
+  - waterloo_gra: [validate_thor_fe, doe_stats, communicate]
+  - chli: [notebook, accuracy]
+  - echoscope: [procedures_functional, pcb]
+  - gn: [sop_reviewing]
+  - breathe: [circuit, range]
+projects:
+  - capstone: [phantoms, control_params, validate_detail]
+  - cervical: [simulate, result]
+publications: [thesis, ibs2025]
+if_space: [experience.breathe.range, experience.gn, projects.cervical.simulate, experience.breathe]

@@ -1,0 +1,25 @@
+# Planar Motor Inc. - Sales Engineer/EIT/Specialist (WaterlooWorks 494977), deadline 2026-11-11
+name: planar_sales_eng
+target: Planar Motor - Sales Engineer/EIT/Specialist
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [phone, email_uw, linkedin, citizen]
+summary: hardware
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [tech_comm, design_proto, controls_instr, testing_analysis]
+education:
+  - waterloo: [research_occ_safety]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [communicate, validate_short, doe_jmp, script_automate]
+  - waterloo_ta: [ta_short]
+  - echoscope: [procedures, pcb]
+  - gn: [sop_reviewing, waste_pickplace_composite]
+  - breathe: [circuit, range]
+projects:
+  - capstone: [control_daq, validate]
+  - uas: [design]
+publications: [thesis, ibs2025]
+if_space: [projects.uas, experience.breathe.range, experience.waterloo_gra.script_automate, publications.thesis]

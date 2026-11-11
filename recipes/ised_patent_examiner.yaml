@@ -1,0 +1,25 @@
+# ISED / CIPO - Patent Examiner, Mechanical Engineering (WaterlooWorks 494856), deadline 2026-11-11
+name: ised_patent_examiner
+target: ISED Canada - Patent Examiner, Mechanical Engineering
+pages: 1
+bold_metrics: false
+headline: sim_design
+contact: [phone, email_uw, linkedin, citizen]
+summary: vehicle_safety_long
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills: [tech_comm, design_proto_drawings, sim_programming, controls_instr]
+education:
+  - waterloo: [research_fea]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [doe_restraint, validate_thor, discrepancy_material, communicate]
+  - waterloo_ta: [ta_measurement]
+  - echoscope: [pcb, procedures]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - cervical: [simulate, result]
+  - capstone: [phantoms, control_daq]
+publications: [thesis, esv2026, ibs2025]
+if_space: [experience.breathe.range, experience.gn.waste_pickplace_halve, projects.capstone.control_daq, experience.waterloo_ta]
