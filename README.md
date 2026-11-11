@@ -35,6 +35,7 @@ Or skip steps 1 to 3: send Claude the job description and this folder, and ask f
 2. About 2 minutes later the PDF appears in `pdf/`. The Overleaf zip appears in `pdf/overleaf/`.
 3. Editing `bank.yaml` or `latex/layout.tex` rebuilds every recipe. Actions tab, "Build resumes", "Run workflow" also rebuilds everything.
 4. If a recipe is rejected, the Actions run turns red and its summary says exactly why.
+5. The build report also lists any bullet that runs 3 or more lines, so you can write a shorter version in `bank.yaml` under the same group.
 
 ## What the builder refuses
 

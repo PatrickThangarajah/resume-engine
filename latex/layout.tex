@@ -118,3 +118,11 @@
 %  with  bold_metrics: true  (build.py then writes \BoldMetricstrue).
 \newif\ifBoldMetrics
 \newcommand{\metric}[1]{\ifBoldMetrics\textbf{#1}\else#1\fi}
+
+% --- long-bullet check -------------------------------------------------------------
+%  Measures each bullet; if it would take about 3 or more lines, writes LONGBULLET
+%  to the log so build.py can flag it. Prints nothing on the page.
+\newlength{\BulletTmp}
+\newcommand{\CheckBullet}[2]{%
+  \settowidth{\BulletTmp}{\descriptionstyle{#2}}%
+  \ifdim\BulletTmp>1.9\linewidth\typeout{LONGBULLET: #1}\fi}

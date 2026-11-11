@@ -37,6 +37,9 @@ RECIPE_KEYS = {"name", "target", "pages", "headline", "contact", "summary", "sec
                "publications", "if_space", "bold_metrics"}
 
 
+LONG_BULLETS = []
+
+
 class RecipeError(Exception):
     pass
 
@@ -297,14 +300,16 @@ def render(recipe, bank, gap=1.0):
             if sec == "education":
                 title, sub, pool = e["degree"], e["institution"], e["notes"]
                 texts = [pool[b] for b in bl or []]
+                ids = [f"{sec}.{k}.{b}" for b in bl or []]
             else:
                 title, sub, pool = e[head_key], e["org"], e["bullets"]
                 texts = [pool[b]["text"] for b in bl]
+                ids = [f"{sec}.{k}.{b}" for b in bl]
             w(f"\\ResumeEntry{{{clean(title)}}}{{{clean(sub)}}}{{{clean(e['location'])}}}{{{clean(e['dates'])}}}")
             if texts:
                 w("\\begin{ResumeBullets}")
-                for t in texts:
-                    w(f"  \\item \\descriptionstyle{{{clean(t)}}}")
+                for i, t in zip(ids, texts):
+                    w(f"  \\item \\descriptionstyle{{{clean(t)}}}\\CheckBullet{{{i}}}{{{clean(t)}}}")
                 w("\\end{ResumeBullets}")
 
     for s in recipe.get("sections", SECTIONS):
@@ -353,6 +358,8 @@ def compile_tex(workdir):
         raise RecipeError("LaTeX failed:\n  " + "\n  ".join(errors[:5] or ["see out/.../main.log"]))
     m = re.search(r"Output written on main\.pdf \((\d+) page", log)
     overfull = sum(float(x) > 2.0 for x in re.findall(r"^Overfull \\hbox \((\d+\.\d+)pt", log, flags=re.M))
+    global LONG_BULLETS
+    LONG_BULLETS = sorted(set(re.findall(r"^LONGBULLET: (\S+)", log, flags=re.M)))
     return int(m.group(1)), overfull
 
 
@@ -429,6 +436,8 @@ def build(recipe_path, bank):
     print(f"[{status}] {name}: {pages} page(s), gap scale {gap} -> {pdf.relative_to(ROOT)}")
     if dropped:
         print("   trimmed to fit: " + ", ".join(dropped))
+    if LONG_BULLETS:
+        print("   3+ line bullets (consider a shorter version in bank.yaml): " + ", ".join(LONG_BULLETS))
     if overfull:
         print(f"   note: {overfull} line(s) run into the margin; see out/{name}/main.log")
     return pages <= target
