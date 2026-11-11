@@ -17,13 +17,25 @@
 
 \fontdir[fonts/]
 
-\colorlet{awesome}{awesome}
+\colorlet{awesome}{awesome-darknight}
+
+% Same fonts and sizes as the resume
+\input{styles.tex}
+\makeatletter
+\renewcommand*{\lettertextstyle}{\fontsize{\BodySize}{1.35em}\bodyfont\upshape\color{text}}
+\renewcommand*{\recipienttitlestyle}[1]{{\fontsize{\BodySize}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\recipientaddressstyle}[1]{{\fontsize{\BodySize}{1.15em}\bodyfont\color{graytext} #1}}
+\renewcommand*{\letterdatestyle}[1]{{\fontsize{\BodySize}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\lettertitlestyle}[1]{{\fontsize{\HeadSize}{1em}\bodyfont\bfseries\color{text} #1}}
+\renewcommand*{\letternamestyle}[1]{{\fontsize{\BodySize}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\makeatother
+\hyphenpenalty=10000          % never split a word across lines, same as the resume
 
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 \name{}{Patrick Thangarajah}
 
-\address{<<HEADLINE>>}
+\position{<<HEADLINE>>}
 
 \extrainfo{<<CONTACT>>}
 
@@ -47,6 +59,7 @@
 \makelettertitle
 
 \begin{cvletter}
+\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0.8em}
 
 <<BODY>>
 

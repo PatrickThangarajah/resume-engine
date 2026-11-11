@@ -495,7 +495,8 @@ def build_letter(path, bank):
     work = OUT / f"letter_{L['name']}"
     if work.exists():
         shutil.rmtree(work)
-    shutil.copytree(LATEX, work, ignore=shutil.ignore_patterns("shim", "layout.tex", "letter_template.tex"))
+    shutil.copytree(LATEX, work, ignore=shutil.ignore_patterns("shim", "layout.tex", "letter_template.tex", "styles.tex"))
+    shutil.copy(LATEX / "styles.tex", work / "styles.tex")
     (work / "main.tex").write_text(tex, encoding="utf-8")
     pages, _ = compile_tex(work)
     pdf = OUT / f"Patrick_Thangarajah_Cover_Letter_{L['name']}.pdf"
