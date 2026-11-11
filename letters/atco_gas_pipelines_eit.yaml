@@ -1,0 +1,18 @@
+# Cover letter: ATCO Gas & Pipelines, Engineer in Training / Engineer
+name: atco_gas_pipelines_eit
+headline: sim_design                   # same headline ID as the resume
+contact: [location, phone, email_uw, linkedin]
+recipient: Hiring Team
+address: ["ATCO Gas & Pipelines", "Calgary, AB"]
+date: 11 November 2026
+title: Engineer in Training / Engineer, Gas & Pipelines
+opening: Dear ATCO Hiring Team,
+closing: Sincerely,
+body: |
+  I recently completed my MASc in Mechanical and Mechatronics Engineering at the University of Waterloo and am interested in the Engineer in Training / Engineer position with ATCO Gas & Pipelines. I'm especially interested in the combination of engineering design, code compliance and project management. I'd like to gain experience taking projects through the design process to construction while working towards my P.Eng.
+
+  Through my previous work experience, I've worked with engineering documentation, customer specifications and technical requirements. During my internship at GN Corporation, I wrote work instructions and SOPs based on engineering drawings and customer specifications. My graduate research also involved validating an LS-DYNA model against physical sled tests and investigating differences between the simulations and test data. I communicated my findings through sponsor presentations, conference papers and my thesis.
+
+  I'm currently working towards my EIT registration with APEGA and hold a Class 5 driver's licence. I'm available to start immediately and would be comfortable with field work and travel. I'd appreciate the opportunity to discuss the position further and how my experience could contribute to the team.
+
+  Thank you for your consideration. I look forward to hearing from you!
