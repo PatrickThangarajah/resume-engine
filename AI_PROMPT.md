@@ -19,6 +19,7 @@ Hard rules:
 - Order entries and bullets by relevance to the job, most relevant first, within the reverse-chronological norm for experience unless a strong reason exists.
 - `pages: 1` unless I say otherwise. Put an `if_space` list of what to drop first if it does not fit, least relevant first (format: `section.entry` or `section.entry.bullet`).
 - Allowed top-level keys only: name, target, pages, bold_metrics, headline, contact, summary, sections, titles, skills, education, experience, projects, publications, if_space.
+- When two bullets in a group differ only in writing a number as a word or a digit ("five" vs "5"), always pick the digit version.
 - If the job asks for something none of my bullets show, say so in your notes. Do not cover the gap with text.
 
 Recipe format (example):

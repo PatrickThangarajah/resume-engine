@@ -18,8 +18,8 @@ experience:
   - gn: [sop_reviewing, waste_pickplace_composite]
   - breathe: [circuit, range]
 projects:
-  - foam: [verify_words, result_words]
+  - foam: [verify, result]
   - capstone: [phantoms, control_daq, verify_requirements]
   - uas: [design, weight]
 publications: [thesis, ibs2025]
-if_space: [projects.uas.weight, experience.waterloo_gra.communicate, projects.uas, projects.foam.result_words]
+if_space: [projects.uas.weight, experience.waterloo_gra.communicate, projects.uas, projects.foam.result]
