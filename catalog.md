@@ -11,6 +11,7 @@
 - injury_biomech: INJURY BIOMECHANICS | OCCUPANT SAFETY | CRASH & IMPACT SIMULATION
 
 ## summaries
+- analytical: Completed an MASc in Mechanical and Mechatronics Engineering at the University of Waterloo in 2026, achieving a 90% graduate coursework average. Developed analytical, statistical modelling and communication skills through simulation studies, physical test validation, machine learning and sponsor presentations, including to Transport Canada, across medical devices, vehicle safety and manufacturing.
 - hardware: Recent MASc graduate in mechanical engineering with practical experience designing, building, and testing hardware systems, including sensor-integrated test setups and control circuitry. Brings simulation, DOE, and data analysis skills to support designs from concept through validation.
 - meddevice: Recent MASc graduate in mechanical engineering with hands-on experience designing, building, and verifying hardware against requirements from concept through validation. Research background in occupant restraint crashworthiness, physical test correlation, DOE, and technical reporting.
 - fea_occupant: Mechanical Engineering MASc graduate with experience in finite element (FE) modelling, FE model validation, and simulation-based design, applied to occupant safety and impact biomechanics.
@@ -64,7 +65,12 @@
     - discrepancy_fit [discrepancy]: Investigated material response, contact, boundary conditions, occupant positioning, and restraint fit to understand simulation-to-test discrepancies
     - script_automate [script]: Automated seat belt fitting with LS-PrePost scripts, reducing repeated setup steps by 43% (7 to 4)
     - script_standardize [script]: Standardized seat belt workflow through LS-PrePost scripts, reducing setup from 7 steps to 4
-    - communicate: Communicated findings through a master's thesis, conference paper, technical reports, and six sponsor presentations
+    - communicate [communicate]: Communicated findings through a master's thesis, conference paper, technical reports, and six sponsor presentations
+    - doe_analytical [doe]: Designed and analyzed a 104-simulation study using JMP DOE, least-squares regression and ANOVA, identifying seat belt anchor positions that reduced peak chest deflection by 16% relative to the study average
+    - validate_analytical [validate]: Validated a THOR-5F finite element model against physical sled tests in 2 configurations, achieving an average ISO 18571 score of 0.71 across 10 measurement channels
+    - discrepancy_analytical [discrepancy]: Investigated discrepancies between simulation predictions and experimental results by evaluating material response, contact, boundary conditions, occupant positioning and restraint fit
+    - script_analytical [script]: Developed LS-PrePost scripts that streamlined a repetitive simulation setup from 7 steps to 4, reducing setup steps by 43%
+    - communicate_analytical [communicate]: Presented research findings through a master's thesis, conference paper, technical reports and six sponsor presentations, including to Transport Canada
 - waterloo_ta: Teaching Assistant - MTE 120: Circuits | University of Waterloo | May 2024 - Aug 2024
     - ta_short [ta]: Supported laboratory instruction for a 100+ student circuits course, troubleshooting hardware and providing feedback on lab work and exams
     - ta_measurement [ta]: Supported laboratory instruction for a 100+ student circuits course, troubleshooting circuit analysis, measurement, and hardware issues and providing feedback on laboratory work and exams
@@ -74,8 +80,9 @@
     - procedures [procedures]: Authored five manufacturing and verification procedures covering PCB assembly, wiring, software setup, and functionality testing; all five were approved and used by the client
     - procedures_functional [procedures]: Authored five manufacturing and verification procedures covering PCB assembly, wiring, software setup, and functional testing; all five were approved and used by the client
 - chli: Summer Research Student | Centre for Heart Lung Innovation | May 2022 - Aug 2022
-    - notebook: Built a Jupyter Notebook transfer-learning script to diagnose diabetic kidney disease using an emerging imaging platform
-    - accuracy: Improved diagnostic accuracy by 10% through model optimization, training refinement, and comparison with existing tissue-slide images
+    - notebook [chli_notebook]: Built a Jupyter Notebook transfer-learning script to diagnose diabetic kidney disease using an emerging imaging platform
+    - accuracy [chli_accuracy]: Improved diagnostic accuracy by 10% through model optimization, training refinement, and comparison with existing tissue-slide images
+    - ml_analytical [chli_notebook+chli_accuracy]: Built a transfer-learning diagnostic model in a Jupyter Notebook, improving diabetic kidney disease detection accuracy by 10% through optimization, training refinement and tissue-slide image comparisons
 - gn: Mechanical Engineering Intern | GN Corporation | Jan 2022 - Apr 2022
     - sop_reviewing [sop]: Developed standardized work instructions and SOPs by reviewing engineering drawings, customer specifications, and existing manufacturing processes
     - sop_verified [sop]: Created standardized work instructions and SOPs verified against engineering drawings and customer specifications
@@ -83,6 +90,7 @@
     - pickplace [pickplace]: Proposed a material-handling process improvement projected to reduce pick-and-place time by 50%
     - waste_pickplace_halve [waste+pickplace]: Reduced fiberglass cutting waste by 50% through process analysis, and proposed a material handling workflow projected to halve pick-and-place time
     - waste_pickplace_composite [waste+pickplace]: Reduced fiberglass composite cutting waste by 50% through process analysis and proposed a material-handling workflow projected to reduce pick-and-place time by 50%
+    - ops_analytical [waste+pickplace]: Reduced fiberglass cutting waste by 50% through process analysis and proposed a material handling workflow projected to halve pick-and-place time
 - breathe: Engineering Intern | Breathe Global | Jul 2021 - Aug 2021
     - circuit: Redesigned the analog control circuit for a negative-pressure breathing device in Altium, using LTspice simulation to select low-cost components
     - range: Expanded the device's achievable breathing range from 70% to 88% of target
