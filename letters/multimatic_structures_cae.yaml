@@ -1,0 +1,18 @@
+# Cover letter: Multimatic, Structures (CAE) Engineer, Markham ON
+name: multimatic_structures_cae
+headline: fea_mechanics
+contact: [location, phone, email_gmail, linkedin]
+recipient: Hiring Team
+address: ["Multimatic", "Markham, ON"]
+date: 12 November 2026
+title: Structures (CAE) Engineer
+opening: Dear Multimatic Hiring Team,
+closing: Sincerely,
+body: |
+  I recently completed my MASc in Mechanical and Mechatronics Engineering at the University of Waterloo. I'm interested in Multimatic's Structures (CAE) Engineer position because of the opportunity to apply my experience in finite element analysis to structural engineering. Much of my graduate research involved modelling crash and impact events in LS-DYNA, and I'd like to continue working in CAE while developing my experience with different types of structural analysis.
+
+  During my graduate research, I validated a THOR-5F finite element model in LS-DYNA against physical sled tests using two different bench configurations. The model achieved an average ISO 18571 score of 0.71 across 10 measurement channels. A large part of this work involved investigating why the simulations and tests produced different results. I examined material response, contact and boundary conditions to better understand the causes. I'd like to apply this same approach to evaluating structural models and understanding their behaviour.
+
+  I also designed and analysed a study of 104 simulations using JMP DOE, regression and ANOVA. I used the results to compare different seat belt anchor positions and identified one with 16% lower peak chest deflection than the study average. In a course project, I verified five polyurethane foam material models against their input stress-strain responses before using them in a rear-impact sled simulation. I've also written LS-PrePost scripts that reduced a repeated setup from 7 steps to 4, and have experience using MATLAB, Python and HyperMesh. I've documented my work through technical reports, my thesis, a conference paper and six sponsor presentations, including to Transport Canada.
+
+  I'm a Canadian citizen with a current passport, willing to travel and happy to relocate to Markham. I'm available to start immediately and would appreciate the opportunity to discuss the position further and how my experience could contribute to the team.
