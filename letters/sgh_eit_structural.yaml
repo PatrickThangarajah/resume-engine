@@ -1,0 +1,18 @@
+# Cover letter: Simpson Gumpertz & Heger, Engineer in Training (Entry-level), Newport Beach CA
+name: sgh_eit_structural
+headline: fea_mechanics
+contact: [phone, email_gmail, linkedin, tn_short]
+recipient: Hiring Team
+address: ["Simpson Gumpertz & Heger", "Newport Beach, CA"]
+date: 12 November 2026
+title: Engineer in Training (Entry-level), Structural Engineering & Structural Mechanics
+opening: Dear SGH Hiring Team,
+closing: Sincerely,
+body: |
+  I recently completed my MASc in Mechanical and Mechatronics Engineering at the University of Waterloo. I’m interested in SGH’s Engineer in Training position because the Advanced Analysis group works on structural mechanics problems involving finite element analysis and dynamics. Much of my graduate research involved modelling crash and impact events in LS-DYNA, and I’d like to apply that experience to a different area of engineering.
+
+  During my graduate research, I validated a THOR-5F finite element model against physical sled tests in two bench configurations, achieving an average ISO 18571 score of 0.71 across 10 measurement channels. A large part of this work involved investigating why the simulations and tests produced different results. I examined material response, contact and boundary conditions to better understand the causes. I also simulated head-first helmet impacts in LS-DYNA and compared fracture forces with published cadaver studies.
+
+  I designed and analysed a study of 104 simulations using JMP DOE, regression and ANOVA. I used the results to compare different seat belt anchor positions and identified one with 16% lower peak chest deflection than the study average. In another course project, I verified five polyurethane foam material models against their input stress-strain responses using single-element simulations before applying them in a rear-impact sled model. I’ve also written LS-PrePost scripts that reduced a repeated setup from 7 steps to 4, and I’ve used MATLAB and Python. I’ve documented my work through technical reports, my thesis, a conference paper and six sponsor presentations, including to Transport Canada.
+
+  I’m eligible to work in the US under TN status, available to start immediately and happy to relocate to Newport Beach. I’m open to field inspections and travel, and plan to pursue my PE licence. I’d appreciate the opportunity to discuss the position further and how my experience could contribute to the team.
