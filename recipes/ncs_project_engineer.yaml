@@ -4,7 +4,7 @@ target: NCS Multistage - Project Engineer (Level I), downhole tool design and te
 pages: 1
 bold_metrics: false
 headline: sim_design
-contact: [location, phone, email_uw, linkedin, citizen]
+contact: [location, phone, email_gmail, linkedin, citizen]
 summary: hardware
 sections: [summary, skills, education, experience, projects, publications]
 titles: {experience: Experience}

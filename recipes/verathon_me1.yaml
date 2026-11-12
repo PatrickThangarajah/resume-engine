@@ -4,7 +4,7 @@ target: Verathon - Mechanical Engineer I (medical device design, prototyping, te
 pages: 1
 bold_metrics: false
 headline: meddevice
-contact: [location, phone, email_uw, linkedin, citizen]
+contact: [location, phone, email_gmail, linkedin, citizen]
 summary: meddevice
 sections: [summary, skills, education, experience, projects, publications]
 titles: {experience: Experience}
