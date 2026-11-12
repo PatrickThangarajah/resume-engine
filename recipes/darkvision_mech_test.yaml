@@ -1,0 +1,24 @@
+# DarkVision Technologies (Koch) - Mechanical Test Engineer, Calgary AB (with Edmonton test facility)
+name: darkvision_mech_test
+target: DarkVision - Mechanical Test Engineer (test design, fixtures, root cause, prototyping)
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [location, phone, email_gmail, linkedin, citizen]
+summary: hardware
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [design_proto_drawings, project_eng_val, controls_instr, programming_data]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_short, discrepancy_troubleshoot, doe_jmp, script_automate, communicate]
+  - echoscope: [procedures_functional, pcb]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - capstone: [control_daq, validate_detail, phantoms]
+  - uas: [design, weight]
+publications: [thesis]
+if_space: [projects.uas.weight, experience.breathe.range, projects.capstone.phantoms, experience.waterloo_gra.communicate]
