@@ -1,0 +1,24 @@
+# Verathon - Mechanical Engineer I, Burnaby BC (EIT eligible preferred)
+name: verathon_me1
+target: Verathon - Mechanical Engineer I (medical device design, prototyping, testing, qualification)
+pages: 1
+bold_metrics: false
+headline: meddevice
+contact: [location, phone, email_uw, linkedin, citizen]
+summary: meddevice
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [design_proto_drawings, testing_analysis, controls_instr, tech_comm]
+education:
+  - waterloo: [research_crashworthiness, coursework_avg]
+  - ubc: [option_coursework]
+experience:
+  - waterloo_gra: [validate_short, doe_jmp, discrepancy_troubleshoot, script_automate, communicate]
+  - echoscope: [pcb, procedures_functional]
+  - gn: [sop_reviewing, waste_pickplace_composite]
+  - breathe: [circuit, range]
+projects:
+  - capstone: [phantoms, control_daq, verify_requirements]
+  - uas: [design, weight]
+publications: [thesis, ibs2025]
+if_space: [projects.uas.weight, experience.breathe.range, projects.uas, experience.waterloo_gra.communicate]

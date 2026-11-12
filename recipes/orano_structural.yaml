@@ -1,0 +1,27 @@
+# Orano Federal Services - Mechanical / Structural Engineer I-II (16821), Federal Way WA
+name: orano_structural
+target: Orano Federal Services - Mechanical / Structural Engineer I (FEA, LS-DYNA, SolidWorks)
+pages: 1
+bold_metrics: false
+headline: fea_mechanics
+contact: [phone, email_uw, linkedin, tn]
+summary: fea_mechanics
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills:
+  - fea
+  - cad_mech_design: {add: [GD\&T]}
+  - programming_data
+  - tech_comm
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor_fe, discrepancy_material, doe_restraint, script_automate, communicate]
+  - echoscope: [procedures_functional, pcb]
+  - gn: [sop_verified, waste_pickplace_halve]
+projects:
+  - foam: [verify, result]
+  - cervical: [simulate, result]
+publications: [thesis, esv2026]
+if_space: [projects.cervical.result, experience.echoscope.pcb, experience.gn.waste_pickplace_halve, projects.cervical]

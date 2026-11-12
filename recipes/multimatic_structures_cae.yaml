@@ -1,0 +1,27 @@
+# Multimatic - Structures (CAE) Engineer, Markham ON (apply by email; cover letter + resume)
+name: multimatic_structures_cae
+target: Multimatic - Structures (CAE) Engineer
+pages: 1
+bold_metrics: false
+headline: fea_mechanics
+contact: [location, phone, email_uw, linkedin, citizen]
+summary: fea_occupant
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills:
+  - fea: {add: [HyperMesh]}
+  - model_dev_val
+  - sim_data_crash
+  - cad_engineering
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor, discrepancy_material, doe_restraint, script_automate, communicate]
+  - waterloo_ta: [ta_short]
+  - gn: [sop_verified, waste_pickplace_halve]
+projects:
+  - foam: [verify, result]
+  - cervical: [simulate, result]
+publications: [thesis, esv2026, ibs2025]
+if_space: [projects.cervical.result, experience.waterloo_ta, publications.ibs2025, experience.gn.waste_pickplace_halve]

@@ -1,0 +1,24 @@
+# Synopsys (Ansys LST) - LS-DYNA Software Verification Engineer, Waterloo/Ottawa ON
+name: synopsys_lsdyna_verification
+target: Synopsys - LS-DYNA Software Verification Engineer
+pages: 1
+bold_metrics: false
+headline: fea_mechanics
+contact: [location, phone, email_uw, linkedin, citizen]
+summary: fea_mechanics
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills: [fea, model_val_testing, programming_tools, tech_comm]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor_fe, discrepancy_material, script_automate, doe_stats, communicate]
+  - waterloo_ta: [ta_short]
+  - chli: [ml_analytical]
+  - gn: [sop_verified]
+projects:
+  - foam: [verify, result]
+  - cervical: [simulate, result]
+publications: [thesis, esv2026, ibs2025]
+if_space: [projects.cervical.result, experience.gn, experience.waterloo_ta, publications.ibs2025]
