@@ -33,6 +33,12 @@ headlines:                    # line under your name
   injury_biomech: INJURY BIOMECHANICS | OCCUPANT SAFETY | CRASH \& IMPACT SIMULATION
 
 summaries:
+  analytical: >-
+    Completed an MASc in Mechanical and Mechatronics Engineering at the University of Waterloo in
+    2026, achieving a 90\% graduate coursework average. Developed analytical, statistical modelling
+    and communication skills through simulation studies, physical test validation, machine learning
+    and sponsor presentations, including to Transport Canada, across medical devices, vehicle safety
+    and manufacturing.
   hardware: >-
     Recent MASc graduate in mechanical engineering with practical experience designing,
     building, and testing hardware systems, including sensor-integrated test setups and
@@ -221,9 +227,38 @@ experience:
           Standardized seat belt workflow through LS-PrePost scripts, reducing setup from \metric{7
           steps to 4}
       communicate:
+        group: communicate
         text: >-
           Communicated findings through a master's thesis, conference paper, technical
           reports, and six sponsor presentations
+      doe_analytical:
+        group: doe
+        text: >-
+          Designed and analyzed a 104-simulation study using JMP DOE, least-squares regression
+          and ANOVA, identifying seat belt anchor positions that reduced peak chest deflection by
+          \metric{16\%} relative to the study average
+      validate_analytical:
+        group: validate
+        text: >-
+          Validated a THOR-5F finite element model against physical sled tests in 2
+          configurations, achieving an average ISO 18571 score of \metric{0.71} across 10
+          measurement channels
+      discrepancy_analytical:
+        group: discrepancy
+        text: >-
+          Investigated discrepancies between simulation predictions and experimental results by
+          evaluating material response, contact, boundary conditions, occupant positioning and
+          restraint fit
+      script_analytical:
+        group: script
+        text: >-
+          Developed LS-PrePost scripts that streamlined a repetitive simulation setup from 7 steps
+          to 4, reducing setup steps by \metric{43\%}
+      communicate_analytical:
+        group: communicate
+        text: >-
+          Presented research findings through a master's thesis, conference paper, technical
+          reports and six sponsor presentations, including to Transport Canada
 
   waterloo_ta:
     org: University of Waterloo
@@ -280,13 +315,21 @@ experience:
     dates: May 2022 - Aug 2022
     bullets:
       notebook:
+        group: chli_notebook
         text: >-
           Built a Jupyter Notebook transfer-learning script to diagnose diabetic kidney disease
           using an emerging imaging platform
       accuracy:
+        group: chli_accuracy
         text: >-
           Improved diagnostic accuracy by \metric{10\%} through model optimization, training refinement,
           and comparison with existing tissue-slide images
+      ml_analytical:
+        group: [chli_notebook, chli_accuracy]
+        text: >-
+          Built a transfer-learning diagnostic model in a Jupyter Notebook, improving diabetic
+          kidney disease detection accuracy by \metric{10\%} through optimization, training
+          refinement and tissue-slide image comparisons
 
   gn:
     org: GN Corporation
@@ -322,6 +365,11 @@ experience:
         text: >-
           Reduced fiberglass composite cutting waste by \metric{50\%} through process analysis and
           proposed a material-handling workflow projected to reduce pick-and-place time by 50\%
+      ops_analytical:
+        group: [waste, pickplace]
+        text: >-
+          Reduced fiberglass cutting waste by \metric{50\%} through process analysis and proposed a
+          material handling workflow projected to halve pick-and-place time
 
   breathe:
     org: Breathe Global
