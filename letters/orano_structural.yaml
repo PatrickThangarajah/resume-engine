@@ -1,7 +1,7 @@
 # Cover letter: Orano Federal Services, Mechanical / Structural Engineer I (16821), Federal Way WA
 name: orano_structural
 headline: fea_mechanics                # same headline ID as the resume
-contact: [phone, email_gmail, linkedin, tn]
+contact: [phone, email_gmail, linkedin, tn_short]
 recipient: Hiring Team
 address: ["Orano Federal Services", "Federal Way, WA"]
 date: 12 November 2026
