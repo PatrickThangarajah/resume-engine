@@ -1,0 +1,18 @@
+# Cover letter: Orano Federal Services, Mechanical / Structural Engineer I (16821), Federal Way WA
+name: orano_structural
+headline: fea_mechanics                # same headline ID as the resume
+contact: [phone, email_gmail, linkedin, tn]
+recipient: Hiring Team
+address: ["Orano Federal Services", "Federal Way, WA"]
+date: 12 November 2026
+title: Mechanical / Structural Engineer I
+opening: Dear Orano Federal Services Hiring Team,
+closing: Sincerely,
+body: |
+  I recently completed my MASc in Mechanical and Mechatronics Engineering at the University of Waterloo. I was interested in Orano Federal Services' Mechanical / Structural Engineer position because of the opportunity to work on structural analysis and impact simulations for nuclear transport packages. Much of my graduate research involved modelling crash and impact events in LS-DYNA, and I'd like to apply that experience to a different area of engineering.
+
+  During my graduate research, I validated a THOR-5F finite element model in LS-DYNA against physical sled tests using two different bench configurations, achieving an average ISO 18571 score of 0.71 across 10 measurement channels. A large part of this work involved investigating differences between simulations and physical tests by examining material response, contact and boundary conditions. I also completed a course project simulating head-first helmet impacts at velocities of 3.4 to 7.0 m/s and compared fracture forces with published cadaver studies. I was particularly interested in this role because the same LS-DYNA impact modelling methods can be applied to analysing transport packages.
+
+  I also designed and analysed a study of 104 simulations using JMP DOE, regression and ANOVA, identifying a seat belt anchor position that reduced peak chest deflection by 16% compared to the study average. In another course project, I verified five polyurethane foam material models against their input stress-strain responses before using them in a rear-impact sled simulation. I've documented my research through technical reports, a thesis, a conference paper and six sponsor presentations, including to Transport Canada. During my internship at GN Corporation, I also prepared work instructions and SOPs based on engineering drawings and customer specifications.
+
+  I'm eligible to work in the US under TN status, available to start immediately and happy to relocate to Federal Way. I'd appreciate the opportunity to discuss the position further and how my experience could contribute to the team.
