@@ -9,6 +9,7 @@
 - fea_biomech: FINITE ELEMENT ANALYSIS | COMPUTATIONAL BIOMECHANICS | LS-DYNA | MODEL VALIDATION
 - fea_mechanics: FINITE ELEMENT ANALYSIS | ENGINEERING MECHANICS | LS-DYNA | MODEL VALIDATION
 - injury_biomech: INJURY BIOMECHANICS | OCCUPANT SAFETY | CRASH & IMPACT SIMULATION
+- analytical: DATA ANALYSIS | STATISTICAL MODELLING | SIMULATION | TECHNICAL COMMUNICATION
 
 ## summaries
 - analytical: Completed an MASc in Mechanical and Mechatronics Engineering at the University of Waterloo in 2026, achieving a 90% graduate coursework average. Developed analytical, statistical modelling and communication skills through simulation studies, physical test validation, machine learning and sponsor presentations, including to Transport Canada, across medical devices, vehicle safety and manufacturing.
@@ -35,6 +36,7 @@
 - tech_comm: [Technical Communication] Scientific literature reviews, technical reports, technical presentations, work instructions, SOPs
 - fea: [Finite Element Analysis] LS-DYNA, LS-PrePost, nonlinear FEA, material modeling, contact, boundary conditions
 - cad_mech_design: [CAD and Mechanical Design] SolidWorks, Onshape, engineering drawings, 3D printing
+- data_stats: [Data Analysis & Statistics] Python, MATLAB, JMP, DOE, least-squares regression, ANOVA, Microsoft Excel
 - programming_data: [Programming and Data Analysis] MATLAB, Python, JMP, DOE, Microsoft Excel, C/C++
 - model_val_testing: [Model Validation and Testing] FE model validation, physical test correlation, ISO 18571, experimental data analysis
 - project_eng_val: [Project Engineering & Validation] Testing & validation, DOE, troubleshooting, process improvement, technical problem-solving
@@ -66,7 +68,7 @@
     - script_automate [script]: Automated seat belt fitting with LS-PrePost scripts, reducing repeated setup steps by 43% (7 to 4)
     - script_standardize [script]: Standardized seat belt workflow through LS-PrePost scripts, reducing setup from 7 steps to 4
     - communicate [communicate]: Communicated findings through a master's thesis, conference paper, technical reports, and six sponsor presentations
-    - doe_analytical [doe]: Designed and analyzed a 104-simulation study using JMP DOE, least-squares regression and ANOVA, identifying seat belt anchor positions that reduced peak chest deflection by 16% relative to the study average
+    - doe_analytical [doe]: Designed and analyzed a 104-simulation study using JMP DOE, least-squares regression and ANOVA, identifying a seat belt anchor position that reduced peak chest deflection by 16% relative to the study average
     - validate_analytical [validate]: Validated a THOR-5F finite element model against physical sled tests in 2 configurations, achieving an average ISO 18571 score of 0.71 across 10 measurement channels
     - discrepancy_analytical [discrepancy]: Investigated discrepancies between simulation predictions and experimental results by evaluating material response, contact, boundary conditions, occupant positioning and restraint fit
     - script_analytical [script]: Developed LS-PrePost scripts that streamlined a repetitive simulation setup from 7 steps to 4, reducing setup steps by 43%
