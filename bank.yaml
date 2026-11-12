@@ -31,6 +31,7 @@ headlines:                    # line under your name
   fea_biomech: FINITE ELEMENT ANALYSIS | COMPUTATIONAL BIOMECHANICS | LS-DYNA | MODEL VALIDATION
   fea_mechanics: FINITE ELEMENT ANALYSIS | ENGINEERING MECHANICS | LS-DYNA | MODEL VALIDATION
   injury_biomech: INJURY BIOMECHANICS | OCCUPANT SAFETY | CRASH \& IMPACT SIMULATION
+  analytical: DATA ANALYSIS | STATISTICAL MODELLING | SIMULATION | TECHNICAL COMMUNICATION
 
 summaries:
   analytical: >-
@@ -114,6 +115,9 @@ skills:
     cad_mech_design:
       category: CAD and Mechanical Design
       items: [SolidWorks, Onshape, engineering drawings, 3D printing]
+    data_stats:
+      category: Data Analysis \& Statistics
+      items: [Python, MATLAB, JMP, DOE, least-squares regression, ANOVA, Microsoft Excel]
     programming_data:
       category: Programming and Data Analysis
       items: [MATLAB, Python, JMP, DOE, Microsoft Excel, C/C++]
@@ -235,7 +239,7 @@ experience:
         group: doe
         text: >-
           Designed and analyzed a 104-simulation study using JMP DOE, least-squares regression
-          and ANOVA, identifying seat belt anchor positions that reduced peak chest deflection by
+          and ANOVA, identifying a seat belt anchor position that reduced peak chest deflection by
           \metric{16\%} relative to the study average
       validate_analytical:
         group: validate
