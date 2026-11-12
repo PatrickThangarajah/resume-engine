@@ -1,0 +1,24 @@
+# Guardian Telecom - Mechanical design engineer, Calgary AB (Job Bank 50700715, posted 2026-11-10)
+name: guardian_mech_design
+target: Guardian Telecom - Mechanical design engineer (SolidWorks, product design)
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [location, phone, email_uw, linkedin, citizen]
+summary: hardware
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [design_proto_drawings, controls_instr, documentation_mfg, project_eng_val]
+education:
+  - waterloo: [research_fea]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [doe_jmp, validate_short, script_automate, communicate]
+  - echoscope: [pcb, procedures_functional]
+  - gn: [sop_reviewing, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - uas: [design, weight]
+  - capstone: [control_daq, phantoms, validate]
+publications: [thesis]
+if_space: [projects.capstone.validate, experience.waterloo_gra.communicate, experience.breathe.range, projects.uas.weight]

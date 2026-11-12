@@ -1,0 +1,24 @@
+# Off The X Inc. - Mechanical engineer, Edmonton AB (Job Bank 50708089, posted 2026-11-11)
+name: offthex_mechanical
+target: Off The X - Mechanical engineer (product development, SolidWorks, failure investigation)
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [location, phone, email_uw, linkedin, citizen]
+summary: hardware
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [design_proto_drawings, project_eng_val, controls_instr, sim_programming]
+education:
+  - waterloo: [research_fea]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [discrepancy_troubleshoot, validate_short, doe_jmp, communicate]
+  - echoscope: [pcb, procedures_functional]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - uas: [design, weight]
+  - capstone: [phantoms, control_daq, validate]
+publications: [thesis]
+if_space: [projects.uas.weight, experience.breathe.range, experience.waterloo_gra.communicate, projects.capstone.validate]

@@ -1,0 +1,24 @@
+# GDMS-Canada - Mechanical Engineer, Design, Calgary AB (posted 2026-11-12)
+name: gdms_mech_design
+target: General Dynamics Mission Systems-Canada - Mechanical Engineer, Design (FEA, shock and vibration)
+pages: 1
+bold_metrics: false
+headline: sim_design
+contact: [location, phone, email_uw, linkedin, citizen]
+summary: fea_mechanics
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [fea, design_proto_drawings, project_eng_val, programming_data]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor_fe, discrepancy_material, doe_restraint, script_automate, communicate]
+  - echoscope: [procedures_functional, pcb]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - foam: [verify, result]
+  - capstone: [validate_detail, control_daq]
+publications: [thesis, esv2026]
+if_space: [experience.breathe.range, projects.capstone.control_daq, experience.breathe, publications.esv2026]
