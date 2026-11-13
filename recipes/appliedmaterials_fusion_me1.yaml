@@ -1,0 +1,24 @@
+# Applied Materials - 2027 Engineer Development Rotation Program, Mechanical Engineer I (R2625756), Gloucester MA
+name: appliedmaterials_fusion_me1
+target: Applied Materials - 2027 Fusion Rotation Program, Mechanical Engineer I (design, assembly, fixtures, test reports)
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [phone, email_gmail, linkedin, tn]
+summary: hardware
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [design_proto_drawings, project_eng_val, documentation_mfg, programming_data]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_short, doe_jmp, discrepancy_troubleshoot, script_automate, communicate]
+  - echoscope: [procedures_functional, pcb]
+  - gn: [sop_reviewing, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - capstone: [control_daq, validate_detail, phantoms]
+  - uas: [design, weight]
+publications: [thesis]
+if_space: [projects.uas.weight, experience.breathe.range, projects.capstone.phantoms, experience.waterloo_gra.communicate]
