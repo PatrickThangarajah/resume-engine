@@ -1,0 +1,24 @@
+# Concepts NREC - CAE Applications Engineer (via The Davis Companies), White River Junction VT / Remote, USD 75-100k
+name: conceptsnrec_cae_applications
+target: Concepts NREC - CAE Applications Engineer
+pages: 1
+bold_metrics: false
+headline: fea_mechanics
+contact: [location, phone, email_gmail, linkedin, tn_short]
+summary: analytical
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills: [fea, model_val_testing, programming_tools, tech_comm]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor_fe, discrepancy_troubleshoot, script_automate, doe_stats, communicate_analytical]
+  - waterloo_ta: [ta_measurement]
+  - echoscope: [procedures]
+  - gn: [sop_verified]
+projects:
+  - foam: [verify, result]
+  - cervical: [simulate]
+publications: [thesis, esv2026]
+if_space: [publications.esv2026, experience.gn, projects.cervical, projects.foam.result]
