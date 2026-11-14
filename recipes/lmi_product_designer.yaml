@@ -1,0 +1,28 @@
+# LMI Technologies - Mechanical Product Designer I (Opto-Mechanical), Burnaby BC. v2 2026-11-14 (source: v1 General Mechanical)
+name: lmi_product_designer
+target: LMI Technologies - Mechanical Product Designer I (SolidWorks, design iteration, prototyping, MATLAB testing, DOE, documentation)
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [location, phone, email_gmail, linkedin, portfolio]
+summary: recent_grad_b
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills:
+  - design_proto_drawings
+  - testing_analysis
+  - documentation_mfg
+  - sim_programming: {remove: [C/C++]}
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_short, doe_stats, discrepancy_troubleshoot, script_automate, communicate]
+  - echoscope: [procedures_functional, pcb]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+projects:
+  - uas: [packaging_alt_A, weight]
+  - capstone: [build_debug_A, pump_control_alt, verify_requirements]
+publications: [thesis]
+if_space: [experience.breathe.range, experience.waterloo_gra.communicate, projects.uas.weight, publications.thesis]

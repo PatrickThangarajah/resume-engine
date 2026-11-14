@@ -1,0 +1,24 @@
+# Space Engine Systems - Junior Aerospace and Mechanical Engineers (Propulsion), Edmonton AB, batch 1 (2026-11-14)
+name: space_engine_junior
+target: Space Engine Systems - Junior Mechanical Engineer (design, assembly, testing, analysis, qualification)
+pages: 1
+bold_metrics: false
+headline: sim_design
+contact: [location, phone, email_gmail, linkedin, portfolio, citizen]
+summary: hardware
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills: [design_proto, sim_programming, testing_analysis, controls_instr]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_thor_fe, discrepancy_material, doe_jmp, script_automate, communicate]
+  - echoscope: [pcb, procedures_functional]
+  - breathe: [circuit, range]
+  - gn: [sop_verified, waste_pickplace_halve]
+projects:
+  - capstone: [control_daq, validate_detail, phantoms]
+  - uas: [design, weight]
+publications: [thesis]
+if_space: [projects.capstone.phantoms, projects.uas.weight, experience.breathe.range, experience.waterloo_gra.communicate]

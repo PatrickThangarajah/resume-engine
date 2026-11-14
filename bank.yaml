@@ -19,6 +19,8 @@ contact:                      # pick any of these, in order, in a recipe
   email_gmail: ptemmanual@gmail.com
   email_uw: petthang@uwaterloo.ca
   linkedin: www.linkedin.com/in/patrickthangarajah/
+  portfolio: \href{https://patrickthangarajah.github.io/}{patrickthangarajah.github.io}
+  tn_citizen: Canadian citizen, eligible for TN status
   tn: Eligible to work in the U.S. under TN status
   tn_short: TN eligible
   citizen: Canadian Citizen
@@ -67,6 +69,16 @@ summaries:
     and technical writing. Graduate research focused on validating a THOR-5F FE model and
     evaluating how seat-belt anchor locations affected rear-seat occupant response in frontal
     impacts.
+
+  # Added 2026-11-14 from Patrick's Batch 1 revision packet (sec. 8), Patrick-approved wording
+  recent_grad_a: >-
+    Recent mechanical engineering graduate with experience in product development, testing and
+    validation, and technical documentation. Project work includes soft-bladder pressure testing
+    and manufacturing and verification procedures.
+  recent_grad_b: >-
+    Recent mechanical engineering graduate with a background in product development, experimental
+    testing and validation, and technical documentation. Experience includes pressure testing of
+    soft-bladder systems and documenting manufacturing and functional verification procedures.
 
 skills:
   rows:
@@ -264,6 +276,44 @@ experience:
           Presented research findings through a master's thesis, conference paper, technical
           reports and six sponsor presentations, including to Transport Canada
 
+      # ---- Added 2026-11-14 (Batch 1 follow-up, approved by Patrick): shorter wording of doe_restraint,
+      # ---- same facts only (104 simulations, DOE, seat belt anchor locations, rear seat, rearward and
+      # ---- inboard, 16% vs study average). Exists so one-page biomech resumes can keep GN. Status: verified.
+      doe_restraint_short:
+        group: doe
+        text: >-
+          Designed and analyzed a 104-simulation DOE of seat belt anchor locations on rear seat
+          occupant response, identifying a rearward and inboard position with \metric{16\%} lower
+          peak chest deflection than the study average
+      # ---- Added 2026-11-14 (Batch 1 packet sec. 6). Source: MASc thesis hdl.handle.net/10012/23684
+      # ---- and Notion THOR-5F record. Personal research (sole author thesis). Status: verified by Patrick.
+      # ---- Boundary: projected risks from published curves (Lee and Craig 2021), not observed injuries;
+      # ---- not forensic causation or reconstruction.
+      injury_risk_alt_A:
+        group: injury_risk
+        keywords: injury risk assessment, AIS 3+, chest deflection, THOR-5F, risk curves
+        text: >-
+          Applied published chest injury risk curves to simulated THOR-5F chest deflection, finding
+          projected AIS 3+ risks above 50\% across all evaluated anchor positions
+      injury_risk_alt_B:
+        group: injury_risk
+        keywords: injury risk assessment, occupant response, AIS 3+
+        text: >-
+          Performed injury risk assessment using THOR-5F occupant response and published chest
+          injury curves, identifying projected AIS 3+ risks exceeding 50\%
+      literature_alt_A:
+        group: literature
+        keywords: literature review, injury tolerance, PMHS, ATD injury metrics
+        text: >-
+          Reviewed thoracic injury tolerance literature, PMHS evidence and ATD injury metrics to
+          interpret simulated chest deflection and AIS 3+ injury risk
+      literature_alt_B:
+        group: literature
+        keywords: injury mechanisms, AIS severity, injury risk curves
+        text: >-
+          Synthesised published findings on thoracic injury mechanisms, AIS severity and injury risk
+          curves to support rear-seat occupant injury risk assessment
+
   waterloo_ta:
     org: University of Waterloo
     role: 'Teaching Assistant - MTE 120: Circuits'
@@ -443,11 +493,20 @@ projects:
     dates: Sep 2023 - Dec 2023
     bullets:
       simulate:
+        group: cervical_simulate   # group tag added 2026-11-14; text unchanged
         text: >-
           Simulated head-first helmet impacts across three velocities (3.4--7.0 m/s) and three
           neck angles at the lowest speed condition using Hybrid III and GHBMC human body
           models in LS-DYNA, then evaluated fracture force thresholds and injury location
           against peer-reviewed literature
+      # ---- Added 2026-11-14 (Batch 1 follow-up, approved by Patrick): shorter wording of simulate.
+      # ---- Facts: five impact configurations, 3.4-7.0 m/s, Hybrid III and GHBMC, LS-DYNA, compared with
+      # ---- published literature (Batch 1 packet sec. 6, original bullet). Personal course project. Verified.
+      simulate_short:
+        group: cervical_simulate
+        text: >-
+          Simulated five head-first helmet impact configurations (3.4--7.0 m/s) with Hybrid III and
+          GHBMC models in LS-DYNA, comparing fracture forces and injury locations with published literature
       result:
         text: >-
           Discovered that predicted peak neck forces (2.26--2.34 kN) fell within the range
@@ -495,6 +554,41 @@ projects:
           Verified the system against defined performance requirements, demonstrating stable,
           repeatable operation up to \metric{4.75 kPa} internal pressure
 
+      # ---- Added 2026-11-14 (Batch 1 packet sec. 5 and 7). Source: Notion capstone record
+      # ---- (3d6604be85e88035863ae41498de2ce2), rechecked 2026-11-14. Four-person team, client Echoscope.
+      # ---- Personal: sensing, controls, DAQ, pump characterisation, PWM control. Shared ("helped",
+      # ---- "contributed", "supported"): chamber machining/sealing, requirements, verification. Status: verified.
+      build_debug_A:
+        group: capstone_build
+        keywords: machining, sealing, troubleshooting, pressure testing
+        text: >-
+          Helped machine and seal a plexiglass pressure chamber, troubleshooting air leaks to support
+          stable pressurisation at 2.2~kPa
+      build_debug_B:
+        group: capstone_build
+        keywords: fabrication, leak testing, sealing
+        text: >-
+          Contributed to chamber fabrication and leak testing, supporting sealing improvements that
+          maintained 2.2~kPa in a 27,000~cm\textsuperscript{3} enclosure
+      pump_control_alt:
+        group: capstone_pump
+        keywords: pump characterisation, Arduino, PWM control, mechatronics
+        text: >-
+          Characterised a peristaltic pump delivering up to 19~mL/s and implemented Arduino PWM
+          control for adjustable bladder filling and ureteric jetting
+      requirements_alt_A:
+        group: capstone_requirements
+        keywords: requirements, client needs, acceptance criteria
+        text: >-
+          Helped translate client needs into four measurable performance requirements covering flow
+          rate, pressure-volume accuracy, voiding pressure and chamber size
+      verification_alt_B:
+        group: capstone_validate
+        keywords: verification, flow rate, pressure-volume, acceptance testing
+        text: >-
+          Supported verification of four capstone requirements, including a 19~mL/s filling flow
+          rate and 24.3\% pressure-volume curve error
+
   uas:
     org: UBC Unmanned Aircraft Systems (Student Design Team)
     title: Payload Team Member
@@ -509,6 +603,23 @@ projects:
         text: >-
           Reduced payload system weight by \metric{50\%} by repurposing components from previous designs
           during concept development
+
+      # ---- Added 2026-11-14 (Batch 1 packet sec. 4). Source: Patrick's recollection plus portfolio
+      # ---- (revised payload winch). Personal: CAD and concept input only. Not claimed: calcs, flight or
+      # ---- drop testing, assembly, drawings. Release height (30 ft vs 30 m) unreconciled, not used.
+      # ---- Overlaps uas.design in content: do not pair with it. Status: verified by Patrick.
+      packaging_alt_A:
+        group: uas_cad
+        keywords: SolidWorks, Onshape, packaging, mechanical integration
+        text: >-
+          Modelled rover wheels, motor packaging and payload winch components in SolidWorks and
+          Onshape to support mechanical integration and prototype development
+      prototype_alt_B:
+        group: uas_cad
+        keywords: CAD, prototyping, 3D printing, concept evaluation
+        text: >-
+          Contributed CAD models and design input to team-based payload prototyping, supporting
+          3D-printed builds and evaluation of rover concepts
 
   caris:
     org: University of British Columbia Collaborative Advanced Robotics and Intelligent Systems (CARIS) Lab

@@ -1,0 +1,27 @@
+# MC Consultants - Associate Consultant, Biomechanics (US, office varies). v2 2026-11-14 (source: v1, modelled on Biokinetics profile)
+name: mc_biomech_associate
+target: MC Consultants - Associate Consultant, Biomechanics (literature review, injury tolerance, occupant kinematics, injury risk)
+pages: 1
+bold_metrics: false
+headline: injury_biomech
+contact: [location, phone, email_gmail, linkedin, portfolio, tn_citizen]
+summary: injury_biomech
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Work/Research Experience}
+skills:
+  - injury_biomech
+  - sim_data_biomech
+  - tech_comm
+  - programming_tools: {remove: [C/C++]}
+education:
+  - waterloo: [research_crashworthiness, coursework_avg]
+  - ubc: [option_coursework]
+experience:
+  - waterloo_gra: [validate_thor_fe, doe_restraint_short, injury_risk_alt_A, literature_alt_A, discrepancy_fit, communicate]
+  - waterloo_ta: [ta_short]
+  - gn: [sop_verified]
+projects:
+  - cervical: [simulate_short, result]
+  - foam: [verify, result]
+publications: [thesis, esv2026, ibs2025]
+if_space: [experience.gn, experience.waterloo_ta, experience.waterloo_gra.discrepancy_fit]

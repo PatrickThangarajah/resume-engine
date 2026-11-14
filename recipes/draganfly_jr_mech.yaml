@@ -1,0 +1,24 @@
+# Draganfly - Jr. Mechanical Engineer (51543), Burnaby BC. v2 2026-11-14 (source: v1 General Mechanical)
+name: draganfly_jr_mech
+target: Draganfly - Jr. Mechanical Engineer (CAD parts and assemblies, prototyping, assembly, testing, documentation)
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [location, phone, email_gmail, linkedin, portfolio]
+summary: recent_grad_a
+sections: [summary, skills, education, projects, experience, publications]
+titles: {experience: Experience}
+skills: [design_proto_drawings, controls_instr, testing_analysis, documentation_mfg]
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+projects:
+  - uas: [packaging_alt_A, weight]
+  - capstone: [build_debug_B, pump_control_alt, verify_requirements]
+experience:
+  - waterloo_gra: [validate_short, discrepancy_troubleshoot, doe_jmp, script_automate]
+  - echoscope: [pcb, procedures_functional]
+  - gn: [sop_verified, waste_pickplace_halve]
+  - breathe: [circuit, range]
+publications: [thesis]
+if_space: [experience.breathe.range, publications.thesis, experience.waterloo_gra.doe_jmp]
