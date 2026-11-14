@@ -6,7 +6,7 @@ bold_metrics: false
 headline: sim_design
 contact: [location, phone, email_gmail, linkedin, tn_short, relocate]
 summary: analytical
-sections: [summary, skills, education, experience, projects, publications]
+sections: [skills, education, experience, projects, publications]
 titles: {experience: Experience}
 skills: [sim_programming, model_val_testing, design_proto_drawings, testing_analysis, tech_comm]
 education:
@@ -16,9 +16,11 @@ experience:
   - waterloo_gra: [validate_thor_fe, doe_stats, discrepancy_troubleshoot, script_automate, communicate_analytical]
   - waterloo_ta: [ta_short]
   - echoscope: [pcb, procedures]
+  - chli: [ml_analytical]
   - gn: [sop_verified, waste_pickplace_halve]
+  - oer: [convert, problems]
 projects:
   - foam: [verify, result]
   - capstone: [control_daq, validate]
 publications: [thesis, esv2026]
-if_space: [publications.esv2026, projects.foam.result, experience.waterloo_ta, projects.capstone.validate]
+if_space: [experience.oer.problems, publications.esv2026, projects.capstone.validate, projects.foam.result, experience.waterloo_ta]

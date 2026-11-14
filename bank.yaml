@@ -388,6 +388,21 @@ experience:
       range:
         text: Expanded the device's achievable breathing range from 70\% to \metric{88\%} of target
 
+  oer:
+    org: University of British Columbia
+    role: OER Mechanics Developer
+    location: Vancouver, BC, Canada (Remote)
+    dates: Sep 2020 - Dec 2020
+    bullets:
+      convert:
+        text: >-
+          Converted \metric{500+} questions from Markdown to PGML/LaTeX using Python for open
+          education resources
+      problems:
+        text: >-
+          Created and coded open mechanics problems for first-year physics and engineering
+          students using Perl, PGML and LaTeX, using GitHub to store and verify questions
+
 projects:
   foam:
     org: University of Waterloo

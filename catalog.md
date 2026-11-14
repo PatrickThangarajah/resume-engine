@@ -96,6 +96,9 @@
 - breathe: Engineering Intern | Breathe Global | Jul 2021 - Aug 2021
     - circuit: Redesigned the analog control circuit for a negative-pressure breathing device in Altium, using LTspice simulation to select low-cost components
     - range: Expanded the device's achievable breathing range from 70% to 88% of target
+- oer: OER Mechanics Developer | University of British Columbia | Sep 2020 - Dec 2020
+    - convert: Converted 500+ questions from Markdown to PGML/LaTeX using Python for open education resources
+    - problems: Created and coded open mechanics problems for first-year physics and engineering students using Perl, PGML and LaTeX, using GitHub to store and verify questions
 
 ## projects (entry: bullets; bullets sharing a [group] are alternatives, pick at most one)
 - foam: Effect of Seat Foam Properties on Injury Response in Rear Impact (ME 725 Course Project) | University of Waterloo | Jan 2024 - Apr 2024
