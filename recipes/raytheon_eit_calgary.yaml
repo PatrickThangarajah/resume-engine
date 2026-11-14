@@ -1,0 +1,28 @@
+# Raytheon Canada - Engineer-In-Training, Calgary AB (1-year contract), 01879615. v2 2026-11-14 (source: v1 General Mechanical)
+name: raytheon_eit_calgary
+target: Raytheon Canada - Engineer-In-Training (requirements, test procedures, investigations, documentation, integration)
+pages: 1
+bold_metrics: false
+headline: sim_design
+contact: [location, phone, email_gmail, linkedin, portfolio, citizen]
+summary: recent_grad_b
+sections: [summary, skills, education, experience, projects, publications]
+titles: {experience: Experience}
+skills:
+  - design_proto_drawings
+  - documentation_mfg
+  - controls_instr
+  - sim_programming: {remove: [C/C++]}
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+experience:
+  - waterloo_gra: [validate_short, discrepancy_troubleshoot, doe_jmp, script_automate, communicate]
+  - echoscope: [procedures_functional, pcb]
+  - breathe: [circuit, range]
+  - gn: [sop_verified, waste_pickplace_halve]
+projects:
+  - capstone: [requirements_alt_A, control_daq, validate_detail]
+  - uas: [design, weight]
+publications: [thesis]
+if_space: [projects.uas.weight, experience.breathe.range, experience.gn.waste_pickplace_halve, publications.thesis]

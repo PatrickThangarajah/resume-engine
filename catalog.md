@@ -1,6 +1,6 @@
 # RESUME BANK CATALOG (pick IDs only; never write or edit text)
 
-## contact: location = Calgary, AB, phone = 403-585-1903, email_gmail = ptemmanual@gmail.com, email_uw = petthang@uwaterloo.ca, linkedin = www.linkedin.com/in/patrickthangarajah/, tn = Eligible to work in the U.S. under TN status, tn_short = TN eligible, citizen = Canadian Citizen, relocate = Open to Relocation
+## contact: location = Calgary, AB, phone = 403-585-1903, email_gmail = ptemmanual@gmail.com, email_uw = petthang@uwaterloo.ca, linkedin = www.linkedin.com/in/patrickthangarajah/, portfolio = \href{https://patrickthangarajah.github.io/}{patrickthangarajah.github.io}, tn_citizen = Canadian citizen, eligible for TN status, tn = Eligible to work in the U.S. under TN status, tn_short = TN eligible, citizen = Canadian Citizen, relocate = Open to Relocation
 
 ## headlines
 - design_proto: Product Design | Prototyping | Testing & Validation | Simulation
@@ -19,6 +19,8 @@
 - injury_biomech: Mechanical Engineering MASc graduate specializing in injury biomechanics, with experience evaluating injury mechanisms through finite element simulation, physical test validation, injury criteria, and peer-reviewed scientific literature.
 - fea_mechanics: Mechanical Engineering MASc graduate with experience in finite element modeling, model validation, impact mechanics, and dynamic simulation.
 - vehicle_safety_long: Recent MASc graduate in mechanical engineering with experience in vehicle safety, impact biomechanics, finite element modelling, physical test data analysis, literature review, and technical writing. Graduate research focused on validating a THOR-5F FE model and evaluating how seat-belt anchor locations affected rear-seat occupant response in frontal impacts.
+- recent_grad_a: Recent mechanical engineering graduate with experience in product development, testing and validation, and technical documentation. Project work includes soft-bladder pressure testing and manufacturing and verification procedures.
+- recent_grad_b: Recent mechanical engineering graduate with a background in product development, experimental testing and validation, and technical documentation. Experience includes pressure testing of soft-bladder systems and documenting manufacturing and functional verification procedures.
 
 ## skills rows (category: items)
 - design_proto: [Design & Prototyping] SolidWorks, Onshape, 3D Printing, Lathe, Mill, Bandsaw, Drill Press
@@ -73,6 +75,11 @@
     - discrepancy_analytical [discrepancy]: Investigated discrepancies between simulation predictions and experimental results by evaluating material response, contact, boundary conditions, occupant positioning and restraint fit
     - script_analytical [script]: Developed LS-PrePost scripts that streamlined a repetitive simulation setup from 7 steps to 4, reducing setup steps by 43%
     - communicate_analytical [communicate]: Presented research findings through a master's thesis, conference paper, technical reports and six sponsor presentations, including to Transport Canada
+    - doe_restraint_short [doe]: Designed and analyzed a 104-simulation DOE of seat belt anchor locations on rear seat occupant response, identifying a rearward and inboard position with 16% lower peak chest deflection than the study average
+    - injury_risk_alt_A [injury_risk]: Applied published chest injury risk curves to simulated THOR-5F chest deflection, finding projected AIS 3+ risks above 50% across all evaluated anchor positions
+    - injury_risk_alt_B [injury_risk]: Performed injury risk assessment using THOR-5F occupant response and published chest injury curves, identifying projected AIS 3+ risks exceeding 50%
+    - literature_alt_A [literature]: Reviewed thoracic injury tolerance literature, PMHS evidence and ATD injury metrics to interpret simulated chest deflection and AIS 3+ injury risk
+    - literature_alt_B [literature]: Synthesised published findings on thoracic injury mechanisms, AIS severity and injury risk curves to support rear-seat occupant injury risk assessment
 - waterloo_ta: Teaching Assistant - MTE 120: Circuits | University of Waterloo | May 2024 - Aug 2024
     - ta_short [ta]: Supported laboratory instruction for a 100+ student circuits course, troubleshooting hardware and providing feedback on lab work and exams
     - ta_measurement [ta]: Supported laboratory instruction for a 100+ student circuits course, troubleshooting circuit analysis, measurement, and hardware issues and providing feedback on laboratory work and exams
@@ -107,7 +114,8 @@
     - result [foam_result]: Determined that all 5 foams met the regulatory head injury limit but exceeded the regulatory neck injury limit at high speed, and that the softest foam reduced head injury risk by roughly 18-20% relative to the stiffest
     - result_words [foam_result]: Determined that all five foams met the regulatory head injury limit but exceeded the regulatory neck injury limit at high speed, and that the softest foam reduced head injury risk by roughly 18-20% relative to the stiffest
 - cervical: Simulation of Cervical Fractures in American Football (ME 720 Course Project) | University of Waterloo | Sep 2023 - Dec 2023
-    - simulate: Simulated head-first helmet impacts across three velocities (3.4-7.0 m/s) and three neck angles at the lowest speed condition using Hybrid III and GHBMC human body models in LS-DYNA, then evaluated fracture force thresholds and injury location against peer-reviewed literature
+    - simulate [cervical_simulate]: Simulated head-first helmet impacts across three velocities (3.4-7.0 m/s) and three neck angles at the lowest speed condition using Hybrid III and GHBMC human body models in LS-DYNA, then evaluated fracture force thresholds and injury location against peer-reviewed literature
+    - simulate_short [cervical_simulate]: Simulated five head-first helmet impact configurations (3.4-7.0 m/s) with Hybrid III and GHBMC models in LS-DYNA, comparing fracture forces and injury locations with published literature
     - result: Discovered that predicted peak neck forces (2.26-2.34 kN) fell within the range reported across two cadaveric studies, and that the Neck Injury Criterion exceeded its injury-risk threshold in only 1 of 5 configurations despite fracture occurring in all 5
 - capstone: Soft Distensible Bladder Model - Capstone Project | University of British Columbia | Sep 2022 - Apr 2023
     - phantoms: Prototyped bladder phantoms using silicone and agar, comparing pressure-volume response with literature to guide material selection
@@ -116,9 +124,16 @@
     - validate [capstone_validate]: Validated system performance using integrated pressure sensing and controls, demonstrating stable and repeatable operation up to 4.75 kPa internal pressure
     - validate_detail [capstone_validate]: Validated pressure chamber performance using the integrated sensor and control system, demonstrating stable, repeatable pressurization at 2.2 kPa (13.8s ramp-up) up to a maximum internal bladder pressure of 4.75 kPa
     - verify_requirements [capstone_validate]: Verified the system against defined performance requirements, demonstrating stable, repeatable operation up to 4.75 kPa internal pressure
+    - build_debug_A [capstone_build]: Helped machine and seal a plexiglass pressure chamber, troubleshooting air leaks to support stable pressurisation at 2.2~kPa
+    - build_debug_B [capstone_build]: Contributed to chamber fabrication and leak testing, supporting sealing improvements that maintained 2.2~kPa in a 27,000~cm\textsuperscript{3} enclosure
+    - pump_control_alt [capstone_pump]: Characterised a peristaltic pump delivering up to 19~mL/s and implemented Arduino PWM control for adjustable bladder filling and ureteric jetting
+    - requirements_alt_A [capstone_requirements]: Helped translate client needs into four measurable performance requirements covering flow rate, pressure-volume accuracy, voiding pressure and chamber size
+    - verification_alt_B [capstone_validate]: Supported verification of four capstone requirements, including a 19~mL/s filling flow rate and 24.3% pressure-volume curve error
 - uas: Payload Team Member | UBC Unmanned Aircraft Systems (Student Design Team) | Sep 2019 - May 2021
     - design: Designed and prototyped a payload drop system and rover in Onshape and SolidWorks, iterating through 3D printed proof-of-concept builds
     - weight: Reduced payload system weight by 50% by repurposing components from previous designs during concept development
+    - packaging_alt_A [uas_cad]: Modelled rover wheels, motor packaging and payload winch components in SolidWorks and Onshape to support mechanical integration and prototype development
+    - prototype_alt_B [uas_cad]: Contributed CAD models and design input to team-based payload prototyping, supporting 3D-printed builds and evaluation of rover concepts
 - caris: Volunteer Researcher - Vacuum Injection Molding End-Effector (VIMEE) Gripper | University of British Columbia Collaborative Advanced Robotics and Intelligent Systems (CARIS) Lab | Jan 2022 - Apr 2023
     - arduino: Programmed Arduino-controlled LED signal patterns for pleat loading height and force feedback and contributed to user testing of the complete system
 

@@ -1,0 +1,29 @@
+# Standard Bots - Mechanical Engineer (On-site), Bolt team, Boston MA. v2 2026-11-14 (source: v1 General Mechanical)
+name: standardbots_me_bolt
+target: Standard Bots - Mechanical Engineer (SolidWorks/Onshape CAD, integration, 3D-printed prototypes, build and debug, test)
+pages: 1
+bold_metrics: false
+headline: design_proto
+contact: [location, phone, email_gmail, linkedin, portfolio, tn_citizen]
+summary: recent_grad_a
+sections: [summary, skills, education, projects, experience, publications]
+titles: {experience: Experience}
+skills:
+  - design_proto_drawings
+  - controls_instr
+  - testing_analysis
+  - sim_programming: {remove: [C/C++]}
+education:
+  - waterloo: [research_fea, coursework_avg]
+  - ubc: [option]
+projects:
+  - capstone: [build_debug_A, pump_control_alt, phantoms]
+  - uas: [packaging_alt_A, weight]
+  - caris: [arduino]
+experience:
+  - waterloo_gra: [validate_short, discrepancy_troubleshoot, script_automate]
+  - echoscope: [pcb, procedures_functional]
+  - breathe: [circuit, range]
+  - gn: [sop_verified, waste_pickplace_halve]
+publications: [thesis]
+if_space: [projects.caris, experience.breathe.range, publications.thesis, projects.capstone.phantoms]
