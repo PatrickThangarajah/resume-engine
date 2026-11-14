@@ -18,9 +18,8 @@ experience:
   - echoscope: [pcb, procedures]
   - chli: [ml_analytical]
   - gn: [sop_verified, waste_pickplace_halve]
-  - oer: [convert, problems]
 projects:
   - foam: [verify, result]
   - capstone: [control_daq, validate]
 publications: [thesis, esv2026]
-if_space: [experience.oer.problems, publications.esv2026, projects.capstone.validate, projects.foam.result, experience.waterloo_ta]
+if_space: [publications.esv2026, projects.capstone.validate, projects.foam.result, experience.waterloo_ta]
